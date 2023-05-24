@@ -11,9 +11,26 @@ const baseStyle = definePartsStyle({
     fontWeight: 'medium',
   },
   control: {
-    bg: 'white',
-    _dark: {
-      bg: 'brand.200',
+    borderWidth: '1px',
+    _checked: {
+      bg: 'brand.500',
+      color: 'white',
+      _hover: {
+        bg: 'brand.600',
+      },
+      _dark: {
+        bg: 'brand.200',
+        color: 'gray.800',
+        _hover: {
+          bg: 'brand.300',
+        },
+      },
+    },
+    _indeterminate: {
+      bg: 'brand.500',
+      _dark: {
+        bg: 'brand.200',
+      },
     },
   },
 })
