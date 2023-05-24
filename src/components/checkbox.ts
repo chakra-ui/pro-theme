@@ -1,30 +1,45 @@
-import { mode, type StyleFunctionProps } from '@chakra-ui/theme-tools'
+import { checkboxAnatomy } from '@chakra-ui/anatomy'
+import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
 
-const baseStyle = (props: StyleFunctionProps) => ({
+const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(
+  checkboxAnatomy.keys,
+)
+
+const baseStyle = definePartsStyle({
   label: {
-    color: 'muted',
+    color: 'emphasized',
     fontWeight: 'medium',
   },
   control: {
-    bg: mode('white', 'gray.800')(props),
-    borderRadius: 'base',
+    bg: 'white',
+    _dark: {
+      bg: 'brand.200',
+    },
   },
 })
 
 const sizes = {
-  md: {
-    label: {
-      fontSize: 'sm',
-    },
-  },
+  sm: definePartsStyle({
+    label: { textStyle: 'xs' },
+    control: { borderRadius: 'sm' },
+    icon: { fontSize: '3xs' },
+  }),
+  md: definePartsStyle({
+    label: { textStyle: 'sm' },
+    control: { borderRadius: 'base' },
+    icon: { fontSize: '2xs' },
+  }),
+  lg: definePartsStyle({
+    label: { textStyle: 'md' },
+    control: { borderRadius: 'md' },
+    icon: { fontSize: 'xs' },
+  }),
 }
 
-const defaultProps = {
-  colorScheme: 'brand',
-}
-
-export default {
+export default defineMultiStyleConfig({
   baseStyle,
   sizes,
-  defaultProps,
-}
+  defaultProps: {
+    colorScheme: 'brand',
+  },
+})

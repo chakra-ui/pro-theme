@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@chakra-ui/anatomy':
+    specifier: 2.1.1
+    version: 2.1.1
   '@chakra-ui/styled-system':
     specifier: 2.9.0
     version: 2.9.0

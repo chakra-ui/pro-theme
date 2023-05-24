@@ -10,6 +10,7 @@
     "release:dry": "release-it --dry-run --verbose"
   },
   "dependencies": {
+    "@chakra-ui/anatomy": "2.1.1",
     "@chakra-ui/styled-system": "2.9.0",
     "@chakra-ui/theme-tools": "2.0.16"
   },
