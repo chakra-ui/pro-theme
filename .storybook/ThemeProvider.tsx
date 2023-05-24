@@ -1,8 +1,8 @@
 import { ChakraProvider, theme as baseTheme, extendTheme, useColorMode } from '@chakra-ui/react'
-import { Story, StoryContext } from '@storybook/react'
-import React, { Fragment, ReactNode, useEffect } from 'react'
-import { theme as proTheme } from '../src'
 import '@fontsource/inter/index.css'
+import { Story, StoryContext } from '@storybook/react'
+import { Fragment, ReactNode, useEffect } from 'react'
+import { theme as proTheme } from '../src'
 
 interface MainProps {
   colorMode?: 'dark' | 'light'
@@ -11,7 +11,7 @@ interface MainProps {
 
 const theme = extendTheme(
   {
-    colors: { ...baseTheme.colors, brand: baseTheme.colors.purple },
+    colors: { ...baseTheme.colors, brand: baseTheme.colors.teal },
   },
   proTheme,
 )
