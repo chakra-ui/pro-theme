@@ -1,23 +1,74 @@
-import { darken, mode, type StyleFunctionProps, transparentize } from '@chakra-ui/theme-tools'
+import { defineStyle, defineStyleConfig } from '@chakra-ui/styled-system'
+import { darken, mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
 
-const baseStyle = {
-  ':focus:not(:focus-visible)': {
-    boxShadow: 'none',
-  },
-  fontWeight: 'semibold',
+const baseStyle = defineStyle({
   borderRadius: 'lg',
-}
+})
 
 const sizes = {
-  lg: {
+  '2xs': defineStyle({
+    h: '6',
+    minW: '6',
+    fontSize: '2xs',
+    px: '2',
+    '& .chakra-button__icon': {
+      fontSize: 'sm',
+    },
+  }),
+  xs: defineStyle({
+    h: '8',
+    minW: '8',
+    fontSize: 'xs',
+    px: '2',
+    '& svg': {
+      fontSize: 'md',
+    },
+  }),
+  sm: defineStyle({
+    h: '9',
+    minW: '9',
+    fontSize: 'sm',
+    px: '3.5',
+    '& .chakra-button__icon': {
+      fontSize: 'xl',
+    },
+  }),
+  md: defineStyle({
+    h: '10',
+    minW: '10',
+    fontSize: 'sm',
+    px: '4',
+    '& .chakra-button__icon': {
+      fontSize: 'xl',
+    },
+  }),
+  lg: defineStyle({
+    h: '11',
+    minW: '11',
     fontSize: 'md',
-  },
-  xl: {
-    h: '3.75rem',
-    minW: '3.75rem',
+    px: '4.5',
+    '& .chakra-button__icon': {
+      fontSize: 'xl',
+    },
+  }),
+  xl: defineStyle({
+    h: '12',
+    minW: '12',
+    fontSize: 'md',
+    px: '5',
+    '& .chakra-button__icon': {
+      fontSize: 'xl',
+    },
+  }),
+  '2xl': defineStyle({
+    h: '15',
+    minW: '15',
     fontSize: 'lg',
-    px: 7,
-  },
+    px: '7',
+    '& .chakra-button__icon': {
+      fontSize: '2xl',
+    },
+  }),
 }
 
 const variants = {
@@ -125,8 +176,8 @@ const variants = {
   },
 }
 
-export default {
+export default defineStyleConfig({
   baseStyle,
   variants,
   sizes,
-}
+})

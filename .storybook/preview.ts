@@ -1,5 +1,5 @@
-import { ThemeProvider } from './ThemeProvider'
 import type { Preview } from '@storybook/react'
+import { ThemeProvider } from './ThemeProvider'
 
 const preview: Preview = {
   parameters: {
@@ -13,6 +13,13 @@ const preview: Preview = {
     layout: 'padded',
   },
   decorators: [ThemeProvider],
+  globalTypes: {
+    isDarkMode: {
+      name: 'Theme',
+      description: 'Global theme for components',
+      defaultValue: 'light',
+    },
+  },
 }
 
 export default preview
