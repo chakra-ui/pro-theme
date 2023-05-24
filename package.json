@@ -3,6 +3,7 @@
   "version": "0.0.66",
   "license": "UNLICENSED",
   "scripts": {
+    "prepare": "husky install",
     "dev": "storybook dev -p 6006",
     "build": "vite build",
     "release": "release-it --ci --verbose",
@@ -14,6 +15,8 @@
   },
   "devDependencies": {
     "@chakra-ui/react": "2.6.1",
+    "@commitlint/cli": "17.6.3",
+    "@commitlint/config-conventional": "17.6.3",
     "@emotion/react": "11.11.0",
     "@emotion/styled": "11.11.0",
     "@fontsource/inter": "5.0.1",
@@ -28,6 +31,10 @@
     "@types/react-dom": "18.2.4",
     "@vitejs/plugin-react": "4.0.0",
     "framer-motion": "10.12.16",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.2",
+    "prettier": "2.8.8",
+    "prettier-plugin-organize-imports": "3.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.8.0",
@@ -36,8 +43,15 @@
     "vite": "4.3.8",
     "vite-plugin-dts": "2.3.0"
   },
-  "publishConfig": {
-    "access": "public"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json}": [
+      "prettier --plugin prettier-plugin-organize-imports --write"
+    ]
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -54,5 +68,12 @@
     "dist",
     "src"
   ],
-  "sideEffects": false
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@8.5.1"
 }
