@@ -1,13 +1,13 @@
-import { Stack, Text } from '@chakra-ui/react'
+import { Box, Stack, Text } from '@chakra-ui/react'
 import type { Meta } from '@storybook/react'
 
 const meta: Meta = {
-  title: 'Text Styles',
+  title: 'Foundations / Tokens',
 }
 
 export default meta
 
-export const Basic = () => {
+export const TextStyles = () => {
   const textStyles = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl']
   return (
     <Stack spacing="8">
@@ -19,6 +19,22 @@ export const Basic = () => {
           <Text textStyle={textStyle} variant={textStyle}>
             Ag
           </Text>
+        </Stack>
+      ))}
+    </Stack>
+  )
+}
+
+export const Shadows = () => {
+  const shadows = ['xs', 'sm', 'md', 'lg', 'xl']
+  return (
+    <Stack spacing="8">
+      {shadows.map((shadow) => (
+        <Stack key={shadow}>
+          <Text textStyle="xs" color="muted">
+            {shadow}
+          </Text>
+          <Box boxSize="16" borderRadius="lg" boxShadow={shadow} />
         </Stack>
       ))}
     </Stack>
