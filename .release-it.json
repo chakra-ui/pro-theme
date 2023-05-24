@@ -1,0 +1,10 @@
+{
+  "git": {
+    "commitMessage": "chore: release pro theme v${version} [skip-ci]"
+  },
+  "plugins": {
+    "@release-it/keep-a-changelog": {
+      "filename": "CHANGELOG.md"
+    }
+  }
+}
