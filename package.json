@@ -15,7 +15,9 @@
     "@chakra-ui/theme-tools": "2.0.16"
   },
   "devDependencies": {
+    "@ark-ui/react": "0.5.0",
     "@chakra-ui/react": "2.6.1",
+    "@chakra-ui/react-context": "2.0.8",
     "@commitlint/cli": "17.6.3",
     "@commitlint/config-conventional": "17.6.3",
     "@emotion/react": "11.11.0",

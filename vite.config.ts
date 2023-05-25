@@ -25,11 +25,7 @@ export default defineConfig({
       fileName: (format) => (format === 'es' ? 'index.mjs' : 'index.cjs'),
     },
     rollupOptions: {
-      external: [
-        ...Object.keys(pkg.dependencies ?? {}),
-        ...Object.keys(pkg.peerDependencies ?? {}),
-        'react/jsx-runtime',
-      ],
+      external: [...Object.keys(pkg.dependencies ?? {}), 'react/jsx-runtime'],
       output: [
         {
           format: 'cjs',
