@@ -4,11 +4,21 @@
 
 ### Added
 
+- Added new `Input` size: `xl` with 48px height.
 - Added new `Button` sizes: `2xs` and `2xl` with corresponding sizes:
   - `2xs`: 24px
   - `2xl`: 60px
 
 ### Changed
+
+- Modified exisintg `Input` heights for more precise control over the input dimensions.
+
+| Size | Before | After |
+| ---- | ------ | ----- |
+| `sm` | 32px   | 36px  |
+| `md` | 40px   | 40px  |
+| `lg` | 48px   | 44px  |
+| `xl` | n/A    | 48px  |
 
 - Modified existing `Button` heights for more precise control over the button dimensions.
 

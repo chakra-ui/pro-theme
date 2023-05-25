@@ -1,4 +1,23 @@
-import { mode, type StyleFunctionProps, transparentize } from '@chakra-ui/theme-tools'
+import { inputAnatomy as parts } from '@chakra-ui/anatomy'
+import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
+import { mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
+
+const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(parts.keys)
+
+const baseStyle = definePartsStyle({
+  field: {
+    _disabled: {
+      opacity: 1.0,
+    },
+    _placeholder: {
+      opacity: 1,
+      color: 'gray.500',
+      _dark: {
+        color: 'gray.300',
+      },
+    },
+  },
+})
 
 const variants = {
   outline: (props: StyleFunctionProps) => ({
@@ -75,18 +94,22 @@ const variants = {
 }
 
 const sizes = {
-  lg: {
-    field: {
-      fontSize: 'md',
-      borderRadius: 'lg',
-    },
-  },
+  sm: definePartsStyle({
+    field: { px: 2.5, h: 9, fontSize: 'sm' },
+  }),
+  md: definePartsStyle({
+    field: { px: 3, h: 10, fontSize: 'md' },
+  }),
+  lg: definePartsStyle({
+    field: { px: 3.5, h: 11, fontSize: 'md' },
+  }),
+  xl: definePartsStyle({
+    field: { px: 4, h: 12, fontSize: 'md' },
+  }),
 }
 
-export default {
-  variants,
+export default defineMultiStyleConfig({
+  baseStyle,
   sizes,
-  defaultProps: {
-    colorScheme: 'gray',
-  },
-}
+  variants,
+})
