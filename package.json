@@ -4,10 +4,12 @@
   "license": "UNLICENSED",
   "scripts": {
     "prepare": "husky install",
-    "dev": "storybook dev -p 6006",
+    "dev": "pnpm storybook:dev",
     "lint": "eslint --ext .ts,.tsx src",
     "build": "vite build",
-    "release": "release-it --ci --verbose"
+    "release": "release-it --ci --verbose",
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "@chakra-ui/anatomy": "2.1.1",
