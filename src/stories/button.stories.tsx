@@ -8,14 +8,6 @@ const meta: Meta = {
 
 export default meta
 
-// Chakra UI vs Pro
-// 2xs: ?! _> 24
-// xs: 24 -> 32
-// sm: 32 -> 36
-// md: 40 -> 40
-// lg: 48 -> 44
-// xl: ?! -> 48
-// 2xl: ?! -> 60
 export const WithSizes = () => {
   const sizes = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl']
   return (

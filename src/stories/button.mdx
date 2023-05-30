@@ -1,0 +1,26 @@
+import { Canvas, Meta } from '@storybook/blocks'
+import * as ButtonStories from './button.stories'
+
+<Meta of={ButtonStories} />
+
+# Button
+
+One of the major elements that we have modified in the Chakra UI Pro theme compared to the Chakra UI default theme is the `Button` component.
+
+The size of the buttons in the Chakra UI Pro theme have been revised and they differ from those in the Chakra UI default theme. Below is a comparison of the button sizes in pixel height.
+
+### Size Comparison
+
+| Size | Default Theme | Pro Theme |
+| ---- | ------------- | --------- |
+| 2xs  | Not Available | 24px      |
+| xs   | 24px          | 32px      |
+| sm   | 32px          | 36px      |
+| md   | 40px          | 40px      |
+| lg   | 48px          | 44px      |
+| xl   | Not Available | 48px      |
+| 2xl  | Not Available | 60px      |
+
+Please note that these changes have been made to provide a more distinct and aesthetically pleasing set of button sizes that cater to a wider range of design needs.
+
+<Canvas of={ButtonStories.WithSizes} />
