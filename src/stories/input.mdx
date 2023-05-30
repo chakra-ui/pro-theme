@@ -1,0 +1,21 @@
+import { Canvas, Meta } from '@storybook/blocks'
+import * as InputStories from './input.stories'
+
+<Meta of={InputStories} />
+
+# Input
+
+In the Chakra UI Pro theme, modifications have also been made to the `Input` component, specifically in terms of its height. The changes in dimensions provide developers with greater control and precision over input field sizes.
+
+### Size Comparison
+
+| Size | Default Theme | Pro Theme |
+| ---- | ------------- | --------- |
+| sm   | 32px          | 36px      |
+| md   | 40px          | 40px      |
+| lg   | 48px          | 44px      |
+| xl   | Not Available | 48px      |
+
+These adjustments were made to offer a broader range of input sizes for better fit in varying design contexts. For detailed guidance on using these size variations in your components, please refer to the usage section of our documentation.
+
+<Canvas of={InputStories.WithSizes} />
