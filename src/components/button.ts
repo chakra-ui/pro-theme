@@ -112,6 +112,9 @@ const variants = {
     _active: {
       bg: mode('gray.100', 'gray.700')(props),
     },
+    _selected: {
+      bg: mode('gray.100', 'gray.700')(props),
+    },
   }),
   ghost: (props: StyleFunctionProps) => ({
     color: 'emphasized',

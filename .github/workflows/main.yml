@@ -33,6 +33,7 @@ jobs:
         run: pnpm lint
 
       - name: Release
+        run: pnpm release:version
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: pnpm release:version
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
