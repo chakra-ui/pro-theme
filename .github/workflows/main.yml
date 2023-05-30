@@ -30,4 +30,9 @@ jobs:
         run: pnpm build
 
       - name: Lint
-        run: pnpm build
+        run: pnpm lint
+
+      - name: Release
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: pnpm release:version
