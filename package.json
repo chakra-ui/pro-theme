@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "storybook dev -p 6006",
+    "lint": "eslint --ext .ts,.tsx src",
     "build": "vite build",
     "release": "release-it --ci --verbose"
   },
@@ -29,7 +30,11 @@
     "@storybook/react-vite": "7.0.18",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
+    "@typescript-eslint/eslint-plugin": "5.49.0",
+    "@typescript-eslint/parser": "5.49.0",
     "@vitejs/plugin-react": "4.0.0",
+    "eslint": "8.32.0",
+    "eslint-plugin-react": "7.32.1",
     "framer-motion": "10.12.16",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
