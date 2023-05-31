@@ -3,7 +3,7 @@
     "commitMessage": "chore: release pro theme v${version} [skip-ci]"
   },
   "github": {
-    "release": true
+    "release": false
   },
   "plugins": {
     "@release-it/keep-a-changelog": {
