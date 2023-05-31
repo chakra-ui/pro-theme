@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2023-05-31
+
 ### Added
 
 - Added new `Input` size: `xl` with 48px height.
@@ -31,5 +33,3 @@
 | `lg`  | 48px   | 44px  |
 | `xl`  | 60px   | 48px  |
 | `2xl` | n/A    | 60px  |
-
-## [0.0.67] - 2023-05-31
