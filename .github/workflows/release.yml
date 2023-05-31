@@ -20,6 +20,12 @@ jobs:
       - name: Checkout Branch
         uses: actions/checkout@v3
 
+      - name: Setup Git User
+        shell: bash
+        run: |
+          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -37,6 +43,12 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Changelog
+        run: pnpm release-it --changelog --increment ${{ github.event.inputs.increment }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Release
         run: pnpm release-it --dry-run --increment ${{ github.event.inputs.increment }}
