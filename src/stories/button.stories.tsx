@@ -1,6 +1,6 @@
 import { Button, Stack, Text } from '@chakra-ui/react'
 import type { Meta } from '@storybook/react'
-import { FiCircle } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 
 const meta: Meta = {
   title: 'Components / Button',
@@ -17,7 +17,7 @@ export const WithSizes = () => {
           <Text textStyle="xs" color="muted">
             {size}
           </Text>
-          <Button variant="primary" size={size} leftIcon={<FiCircle />} rightIcon={<FiCircle />}>
+          <Button variant="primary" size={size} rightIcon={<FiArrowRight />}>
             Button
           </Button>
         </Stack>
@@ -35,7 +35,7 @@ export const WithVariants = () => {
           <Text textStyle="xs" color="muted">
             {variant}
           </Text>
-          <Button variant={variant} leftIcon={<FiCircle />} rightIcon={<FiCircle />}>
+          <Button variant={variant} rightIcon={<FiArrowRight />}>
             Button
           </Button>
         </Stack>
