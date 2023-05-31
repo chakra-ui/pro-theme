@@ -3,13 +3,19 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: Next release version
+      increment:
+        description: 'Release version'
         required: true
+        default: 'patch'
+        type: choice
+        options:
+          - major
+          - minior
+          - patch
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
       - name: Send greeting
-        run: echo "Release next version ${{ github.event.inputs.version }}"
+        run: echo "Release next version ${{ github.event.inputs.increment }}"
