@@ -7,8 +7,6 @@
     "dev": "pnpm storybook:dev",
     "lint": "eslint --ext .ts,.tsx src",
     "build": "vite build",
-    "release": "release-it --ci --verbose",
-    "release:version": "release-it --release-version",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
