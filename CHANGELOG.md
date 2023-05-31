@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Added support for `DatePicker`
+
 ## [0.0.67] - 2023-05-31
 
 ### Added
@@ -11,7 +17,7 @@
 
 ### Changed
 
-- Modified exisintg `Input` heights for more precise control over the input dimensions.
+- Modified existing `Input` heights for more precise control over the input dimensions.
 
 | Size | Before | After |
 | ---- | ------ | ----- |
@@ -31,5 +37,3 @@
 | `lg`  | 48px   | 44px  |
 | `xl`  | 60px   | 48px  |
 | `2xl` | n/A    | 60px  |
-
-## [0.0.66] - 2023-04-25
