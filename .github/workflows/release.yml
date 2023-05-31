@@ -47,7 +47,7 @@ jobs:
         run: pnpm build
 
       - name: Release
-        run: pnpm release-it --ci --increment ${{ github.event.inputs.increment }} --VV
+        run: pnpm release-it --verbose --ci  --increment ${{ github.event.inputs.increment }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
