@@ -1,12 +1,6 @@
 # Changelog
 
-## Unreleased
-
-### Added
-
-- Added support for `DatePicker`
-
-## [0.0.67] - 2023-05-31
+## [Unreleased]
 
 ### Added
 
@@ -37,3 +31,5 @@
 | `lg`  | 48px   | 44px  |
 | `xl`  | 60px   | 48px  |
 | `2xl` | n/A    | 60px  |
+
+## [0.0.67] - 2023-05-31
