@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2023-06-01
+
 ### Fixed
 
 - Remove `engines` from `package.json` to allow for more flexibility
