@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Renamed default font family to `Inter Variable` from `InterVariable`
+
 ## [0.1.1] - 2023-06-01
 
 ### Fixed
