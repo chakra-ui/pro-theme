@@ -28,10 +28,22 @@ export const WithSizes = () => {
 
 export const WithVariants = () => {
   const variants = [
-    ['solid', 'primary'],
-    ['outline', 'secondary'],
-    ['ghost', 'tertiary'],
-    ['link', 'text'],
+    [
+      { variant: 'solid', colorScheme: 'teal' },
+      { variant: 'primary', colorScheme: 'brand' },
+    ],
+    [
+      { variant: 'outline', colorScheme: 'gray' },
+      { variant: 'secondary', colorScheme: 'gray' },
+    ],
+    [
+      { variant: 'ghost', colorScheme: 'gray' },
+      { variant: 'tertiary', colorScheme: 'gray' },
+    ],
+    [
+      { variant: 'link', colorScheme: 'gray' },
+      { variant: 'text', colorScheme: 'gray' },
+    ],
   ]
   return (
     <Stack spacing="20" align="start">
@@ -40,19 +52,19 @@ export const WithVariants = () => {
           <HStack spacing="12">
             <Stack spacing="3">
               <Text textStyle="xs" color="fg.muted">
-                {chakra}
+                {chakra.variant}
               </Text>
               <Button
-                variant={chakra}
+                variant={chakra.variant}
+                colorScheme={chakra.colorScheme}
                 rightIcon={<FiArrowRight />}
-                colorScheme={chakra === 'solid' ? 'teal' : 'gray'}
               >
                 Button
               </Button>
               <Button
-                variant={chakra}
+                variant={chakra.variant}
+                colorScheme={chakra.colorScheme}
                 rightIcon={<FiArrowRight />}
-                colorScheme={chakra === 'solid' ? 'teal' : 'gray'}
                 isDisabled
               >
                 Button
@@ -60,20 +72,20 @@ export const WithVariants = () => {
             </Stack>
             <Stack spacing="3">
               <Text textStyle="xs" color="fg.muted">
-                {pro}
+                {pro.variant}
               </Text>
               <Button
-                variant={pro}
+                variant={pro.variant}
+                colorScheme={pro.colorScheme}
                 rightIcon={<FiArrowRight />}
-                colorScheme={pro === 'text' ? 'gray' : 'teal'}
               >
                 Button
               </Button>
               <Button
-                variant={pro}
+                variant={pro.variant}
+                colorScheme={pro.colorScheme}
                 rightIcon={<FiArrowRight />}
                 isDisabled
-                colorScheme={pro === 'text' ? 'gray' : 'teal'}
               >
                 Button
               </Button>
