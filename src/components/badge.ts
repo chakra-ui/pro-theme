@@ -1,47 +1,51 @@
-import { darken, mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
-
-const baseStyle = {
-  textTransform: 'normal',
-  fontWeight: 'medium',
-  borderRadius: '2xl',
-}
+import { defineCssVars, defineStyle } from '@chakra-ui/styled-system'
+import { transparentize } from '@chakra-ui/theme-tools'
 
 const sizes = {
-  lg: {
-    fontSize: 'sm',
-    px: '3',
-    py: '1',
-  },
-  md: {
-    fontSize: 'sm',
-    lineHeight: '1.25rem',
-    px: '2.5',
-    py: '0.5',
-  },
-  sm: {
-    fontSize: 'xs',
-    lineHeight: '1.5',
-    px: '2',
-    py: '0.5',
-  },
+  sm: defineStyle({
+    textStyle: 'xs',
+    px: 2,
+    py: 0.5,
+  }),
+  md: defineStyle({
+    textStyle: 'sm',
+    px: 2.5,
+    py: 0.5,
+  }),
+  lg: defineStyle({
+    textStyle: 'sm',
+    px: 3,
+    py: 1,
+  }),
 }
 
+const vars = defineCssVars('badge', ['bg', 'color', 'shadow'])
+
 const variants = {
-  subtle: (props: StyleFunctionProps) => ({
-    bg: mode(
-      darken(`${props.colorScheme}.50`, 2)(props.theme),
-      transparentize(`${props.colorScheme}.200`, 0.16)(props.theme),
-    )(props),
+  pill: defineStyle((props) => {
+    const { colorScheme, theme } = props
+    const darkBg = transparentize(`${colorScheme}.200`, 0.16)(theme)
+    return {
+      textTransform: 'normal',
+      fontWeight: 'medium',
+      borderRadius: '2xl',
+      [vars.shadow.variable]: `inset 0 0 0px 1px ${props.theme.colors[colorScheme][200]}`,
+      [vars.bg.variable]: `colors.${colorScheme}.50`,
+      [vars.color.variable]: `colors.${colorScheme}.700`,
+      _dark: {
+        [vars.bg.variable]: darkBg,
+        [vars.color.variable]: `colors.${colorScheme}.200`,
+        [vars.shadow.variable]: `inset 0 0 0px 1px ${vars.color.reference}`,
+      },
+    }
   }),
 }
 
 const defaultProps = {
   size: 'md',
-  variant: 'subtle',
 }
 
 export default {
-  baseStyle,
   defaultProps,
   variants,
   sizes,
