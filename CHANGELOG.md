@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.3.0-beta.0] - 2023-06-06
+
 ### Changed
 
 - Tweaked `Button` variant `text` to have a more subtle color.
