@@ -16,7 +16,7 @@
 - Renamed variant `primary-on-accent` to `primary.accent`.
 - Renamed variant `secondary-on-accent` to `secondary.accent`.
 - Renamed variant `outline` to `tertiary`.
-- Renamed variant` ghost-on-accent` to `tertiary.accent`.
+- Renamed variant `ghost-on-accent` to `tertiary.accent`.
 - Renamed variant `link` to `text`.
 - Renamed variant `link-on-accent` to `text.accent`.
 
