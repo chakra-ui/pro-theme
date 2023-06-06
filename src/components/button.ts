@@ -273,18 +273,18 @@ const variants = {
 
     return {
       ...baseStyle,
-      [vars.color.variable]: `colors.${colorScheme}.700`,
+      [vars.color.variable]: `colors.${colorScheme}.600`,
       _dark: {
         [vars.color.variable]: `colors.${colorScheme}.200`,
       },
       _hover: {
-        [vars.color.variable]: `colors.${colorScheme}.800`,
+        [vars.color.variable]: `colors.${colorScheme}.700`,
         _dark: {
           [vars.color.variable]: `colors.${colorScheme}.300`,
         },
       },
       _active: {
-        [vars.color.variable]: `colors.${colorScheme}.800`,
+        [vars.color.variable]: `colors.${colorScheme}.700`,
         _dark: {
           [vars.color.variable]: `colors.${colorScheme}.300`,
         },

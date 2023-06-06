@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Tweaked `Button` variant `text` to have a more subtle color.
+
+### Fixed
+
+- Fixed `Checkbox` to have the correct font size
+
 ## [0.2.2] - 2023-06-06
 
 ### Fixed

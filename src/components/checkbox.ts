@@ -1,58 +1,62 @@
 import { checkboxAnatomy } from '@chakra-ui/anatomy'
-import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
+import { createMultiStyleConfigHelpers, defineCssVars } from '@chakra-ui/styled-system'
 
 const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(
   checkboxAnatomy.keys,
 )
 
-const baseStyle = definePartsStyle({
-  label: {
-    color: 'emphasized',
-    fontWeight: 'medium',
-  },
-  control: {
-    borderWidth: '1px',
-    borderColor: 'gray.300',
-    _dark: {
-      borderColor: 'gray.600',
+const vars = defineCssVars('checkbox', ['bg'])
+
+const baseStyle = definePartsStyle((props) => {
+  const { colorScheme } = props
+  return {
+    label: {
+      color: 'fg.emphasized',
+      fontWeight: 'medium',
     },
-    _checked: {
-      bg: 'brand.500',
-      color: 'white',
-      _hover: {
-        bg: 'brand.600',
-      },
-      _dark: {
-        bg: 'brand.200',
-        color: 'gray.800',
+    control: {
+      borderWidth: '1px',
+      borderColor: 'border.emphasized',
+      bg: vars.bg.reference,
+      _checked: {
+        [vars.bg.variable]: `colors.${colorScheme}.500`,
+
+        color: 'white',
         _hover: {
-          bg: 'brand.300',
+          [vars.bg.variable]: `colors.${colorScheme}.600`,
+        },
+        _dark: {
+          [vars.bg.variable]: `colors.${colorScheme}.200`,
+          color: 'gray.800',
+          _hover: {
+            [vars.bg.variable]: `colors.${colorScheme}.300`,
+          },
+        },
+      },
+      _indeterminate: {
+        [vars.bg.variable]: `colors.${colorScheme}.500`,
+        _dark: {
+          [vars.bg.variable]: `colors.${colorScheme}.200`,
         },
       },
     },
-    _indeterminate: {
-      bg: 'brand.500',
-      _dark: {
-        bg: 'brand.200',
-      },
-    },
-  },
+  }
 })
 
 const sizes = {
   sm: definePartsStyle({
-    label: { textStyle: 'xs' },
+    label: { fontSize: 'xs', lineHeight: '1.125rem' },
     control: { borderRadius: 'sm' },
     icon: { fontSize: '3xs' },
   }),
   md: definePartsStyle({
-    label: { textStyle: 'sm' },
+    label: { fontSize: 'sm', lineHeight: '1.25rem' },
     control: { borderRadius: 'base' },
     icon: { fontSize: '2xs' },
   }),
   lg: definePartsStyle({
-    label: { textStyle: 'md' },
-    control: { borderRadius: 'md' },
+    label: { fontSize: 'md' },
+    control: { borderRadius: 'md', lineHeight: '1.5rem' },
     icon: { fontSize: 'xs' },
   }),
 }
