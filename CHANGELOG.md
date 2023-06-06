@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.1] - 2023-06-06
+
 ### Changed
 
 - The default `colorScheme` property for `Button` has been changed from 'teal' to 'brand'.
