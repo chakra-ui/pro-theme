@@ -11,6 +11,11 @@ const preview: Preview = {
       },
     },
     layout: 'padded',
+    options: {
+      storySort: {
+        order: ['Introduction', 'Changelog'],
+      },
+    },
   },
   decorators: [ThemeProvider],
   globalTypes: {
