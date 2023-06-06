@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.2] - 2023-06-06
+
 ### Fixed
 
 - Added missing `activeLink` styles for `Button` variants `tertiary` and `tertiary.accent`.
