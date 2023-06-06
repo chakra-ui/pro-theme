@@ -2,9 +2,15 @@
 
 ## [Unreleased]
 
+### Added
+
+- Introduced `gray.25` with the hexadecimal value #fcfdfe.
+- Introduced `gray.950` with the hexadecimal value #14151e.
+
 ### Changed
 
 - Renamed default font family to `Inter Variable` from `InterVariable`
+- Adjusted `gray.50` to better fit into lower hues. `gray.50` color hex value has been changed from #F7FAFC to #f4f8fa.
 
 ## [0.1.1] - 2023-06-01
 
