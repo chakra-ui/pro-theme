@@ -1,6 +1,6 @@
 {
   "git": {
-    "commitMessage": "chore: release pro theme v${version} [skip-ci]"
+    "commitMessage": "chore: release pro theme v${version}"
   },
   "github": {
     "release": true
