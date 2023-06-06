@@ -333,6 +333,6 @@ export default defineStyleConfig({
   variants,
   sizes,
   defaultProps: {
-    colorScheme: 'teal',
+    colorScheme: 'brand',
   },
 })
