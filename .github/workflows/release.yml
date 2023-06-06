@@ -13,8 +13,8 @@ on:
           - minor
           - patch
 
-      preRelease:
-        description: ''
+      isPreRelease:
+        description: 'Pre-Release'
         required: true
         default: true
         type: boolean
@@ -34,8 +34,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
-        with:
-          version: 8.5.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -51,7 +49,7 @@ jobs:
         run: pnpm build
 
       - name: Pre-Release
-        if: github.event.inputs.preRelease == 'true'
+        if: github.event.inputs.isPreRelease == 'true'
         run: pnpm release-it --ci --increment ${{ github.event.inputs.increment }} --preReleaseId=beta --npm.tag=beta
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
