@@ -4,13 +4,46 @@
 
 ### Added
 
-- Introduced `gray.25` with the hexadecimal value #fcfdfe.
-- Introduced `gray.950` with the hexadecimal value #14151e.
+- Introduced `gray.25` with the hexadecimal value `#fcfdfe`.
+- Introduced `gray.950` with the hexadecimal value `#14151e`.
+- Introduced a new semantic token `border.emphasized`.Ø
 
 ### Changed
 
-- Renamed default font family to `Inter Variable` from `InterVariable`
+- Renamed default font family to `Inter Variable` from `InterVariable`.
 - Adjusted `gray.50` to better fit into lower hues. `gray.50` color hex value has been changed from #F7FAFC to #f4f8fa.
+- Renamed several semantic tokens to improve their intuitiveness and self-explanatory nature.
+
+#### Background related tokens:
+
+| Before             | After               |
+| ------------------ | ------------------- |
+| `bg-canvas`        | `bg.canvas`         |
+| `bg-surface`       | `bg.surface`        |
+| `bg-subtle`        | `bg.subtle`         |
+| `bg-muted`         | `bg.muted`          |
+| `bg-accent`        | `bg.accent.default` |
+| `bg-accent-subtle` | `bg.accent.subtle`  |
+| `bg-accent-muted`  | `bg.accent.muted`   |
+
+#### Foreground related tokens:
+
+| Before             | After               |
+| ------------------ | ------------------- |
+| `default`          | `fg.default`        |
+| `emphasized`       | `fg.emphasized`     |
+| `muted`            | `fg.muted`          |
+| `subtle`           | `fg.subtle`         |
+| `inverted`         | `fg.inverted`       |
+| `on-accent-subtle` | `fg.accent.subtle`  |
+| `on-accent-muted`  | `fg.accent.muted`   |
+| `on-accent`        | `fg.accent.default` |
+
+#### Border related tokens:
+
+| Before   | After            |
+| -------- | ---------------- |
+| `border` | `border.default` |
 
 ## [0.1.1] - 2023-06-01
 

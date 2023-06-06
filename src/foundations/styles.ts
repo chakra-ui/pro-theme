@@ -1,17 +1,17 @@
-import { mode, type StyleFunctionProps } from '@chakra-ui/theme-tools'
+import { defineStyle } from '@chakra-ui/styled-system'
 
 export default {
-  global: (props: StyleFunctionProps) => ({
+  global: defineStyle({
     body: {
-      color: 'default',
-      bg: 'bg-canvas',
+      color: 'fg.default',
+      bg: 'bg.canvas',
     },
     '*::placeholder': {
       opacity: 1,
-      color: 'muted',
+      color: 'fg.muted',
     },
     '*, *::before, &::after': {
-      borderColor: mode('gray.200', 'gray.700')(props),
+      borderColor: 'border.default',
     },
     'html,body': {
       height: '100%',

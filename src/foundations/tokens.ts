@@ -1,63 +1,65 @@
 export default {
   colors: {
-    'bg-canvas': {
-      default: 'gray.50',
+    'bg.canvas': {
+      default: 'gray.25',
       _dark: 'gray.900',
     },
-    'bg-surface': {
+    'bg.surface': {
       default: 'white',
       _dark: 'gray.800',
     },
-    'bg-subtle': {
+    'bg.subtle': {
       default: 'gray.50',
       _dark: 'gray.700',
     },
-    'bg-muted': {
+    'bg.muted': {
       default: 'gray.100',
       _dark: 'gray.600',
     },
-    default: {
-      default: 'gray.900',
+
+    'fg.default': {
+      default: 'gray.950',
       _dark: 'white',
     },
-    inverted: {
-      default: 'white',
-      _dark: 'gray.900',
-    },
-    emphasized: {
+
+    'fg.emphasized': {
       default: 'gray.700',
-      _dark: 'gray.100',
+      _dark: 'gray.200',
     },
-    muted: {
+    'fg.muted': {
       default: 'gray.600',
       _dark: 'gray.300',
     },
-    subtle: {
+    'fg.subtle': {
       default: 'gray.500',
       _dark: 'gray.400',
     },
-    border: {
+    'fg.inverted': {
+      default: 'white',
+      _dark: 'gray.950',
+    },
+
+    'border.default': {
       default: 'gray.200',
       _dark: 'gray.700',
     },
+    'border.emphasized': {
+      default: 'gray.300',
+      _dark: 'gray.600',
+    },
+
+    'bg.accent.default': 'brand.600',
+    'bg.accent.subtle': 'brand.500',
+    'bg.accent.muted': 'brand.400',
+
+    'fg.accent.subtle': 'brand.100',
+    'fg.accent.muted': 'brand.50',
+    'fg.accent.default': 'white',
+
     accent: {
       default: 'brand.500',
       _dark: 'brand.200',
     },
-    success: {
-      default: 'green.600',
-      _dark: 'green.200',
-    },
-    error: {
-      default: 'red.600',
-      _dark: 'red.200',
-    },
-    'bg-accent': 'brand.600',
-    'bg-accent-subtle': 'brand.500',
-    'bg-accent-muted': 'brand.400',
-    'on-accent': 'white',
-    'on-accent-muted': 'brand.50',
-    'on-accent-subtle': 'brand.100',
   },
   shadows: {
     xs: {
