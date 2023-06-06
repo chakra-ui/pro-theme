@@ -1,9 +1,4 @@
-import { defineStyle, defineStyleConfig } from '@chakra-ui/styled-system'
-import { darken, mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
-
-const baseStyle = defineStyle({
-  borderRadius: 'lg',
-})
+import { defineCssVars, defineStyle, defineStyleConfig } from '@chakra-ui/styled-system'
 
 const sizes = {
   '2xs': defineStyle({
@@ -71,116 +66,271 @@ const sizes = {
   }),
 }
 
+const vars = defineCssVars('button', ['bg', 'color'])
+
 const variants = {
-  primary: (props: StyleFunctionProps) =>
-    props.theme.components['Button']['variants']['solid']({
-      ...props,
-      variant: 'solid',
-      colorScheme: 'brand',
-    }),
-  'primary-on-accent': () => ({
-    bg: 'brand.50',
-    color: 'brand.600',
-    _hover: { bg: 'brand.100' },
-    _active: { bg: 'brand.100' },
-  }),
-  secondary: (props: StyleFunctionProps) =>
-    props.theme.components['Button']['variants']['outline']({
-      ...props,
-      variant: 'outline',
-      colorScheme: 'gray',
-    }),
-  'secondary-on-accent': {
-    color: 'white',
-    borderColor: 'brand.50',
-    borderWidth: '1px',
-    _hover: { bg: 'whiteAlpha.200' },
-    _active: { bg: 'whiteAlpha.200' },
-  },
-  outline: (props: StyleFunctionProps) => ({
-    color: 'emphasized',
-    bg: mode('white', 'gray.800')(props),
-    _hover: {
-      bg: mode(
-        darken('gray.50', 1)(props.theme),
-        transparentize('gray.700', 0.4)(props.theme),
-      )(props),
-    },
-    _checked: {
-      bg: mode('gray.100', 'gray.700')(props),
-    },
-    _active: {
-      bg: mode('gray.100', 'gray.700')(props),
-    },
-    _selected: {
-      bg: mode('gray.100', 'gray.700')(props),
-    },
-  }),
-  ghost: (props: StyleFunctionProps) => ({
-    color: 'emphasized',
-    _hover: {
-      bg: mode(darken('gray.50', 1)(props.theme), darken('gray.700', 4)(props.theme))(props),
-    },
-    _active: {
-      bg: mode(darken('gray.50', 1)(props.theme), darken('gray.700', 4)(props.theme))(props),
-    },
-    _activeLink: {
-      bg: mode('gray.100', 'gray.700')(props),
-    },
-  }),
-  'ghost-on-accent': (props: StyleFunctionProps) => ({
-    color: 'brand.50',
-    _hover: {
-      bg: transparentize('brand.500', 0.67)(props.theme),
-    },
-    _activeLink: {
-      color: 'white',
-      bg: 'bg-accent-subtle',
-    },
-  }),
-  link: (props: StyleFunctionProps) => {
-    if (props.colorScheme === 'gray') {
-      return {
-        color: 'muted',
-        _hover: {
-          textDecoration: 'none',
-          color: 'default',
-        },
-        _active: {
-          color: 'default',
-        },
-      }
-    }
+  primary: defineStyle((props) => {
+    const { colorScheme } = props
     return {
-      color: mode(`${props.colorScheme}.600`, `${props.colorScheme}.200`)(props),
+      borderRadius: 'lg',
+      boxShadow: 'xs',
+      bg: vars.bg.reference,
+      color: vars.color.reference,
+
+      [vars.bg.variable]: `colors.${colorScheme}.500`,
+      [vars.color.variable]: `colors.white`,
+      _dark: {
+        [vars.bg.variable]: `colors.${colorScheme}.200`,
+        [vars.color.variable]: `colors.gray.800`,
+      },
       _hover: {
-        color: mode(`${props.colorScheme}.700`, `${props.colorScheme}.300`)(props),
-        textDecoration: 'none',
+        [vars.bg.variable]: `colors.${colorScheme}.600`,
+        _disabled: {
+          background: 'inerit',
+        },
+        _dark: {
+          [vars.bg.variable]: `colors.${colorScheme}.300`,
+        },
       },
       _active: {
-        color: mode(`${props.colorScheme}.700`, `${props.colorScheme}.300`)(props),
+        [vars.bg.variable]: `colors.${colorScheme}.700`,
+        _dark: {
+          [vars.bg.variable]: `colors.${colorScheme}.400`,
+        },
+      },
+      _disabled: {
+        _hover: {
+          [vars.bg.variable]: `colors.${colorScheme}.500`,
+          _dark: {
+            [vars.bg.variable]: `colors.${colorScheme}.200`,
+          },
+        },
+      },
+      _focusVisible: {
+        boxShadow: 'focus',
       },
     }
-  },
-  'link-on-accent': () => {
-    return {
+  }),
+
+  secondary: defineStyle({
+    borderWidth: '1px',
+    borderColor: 'border.emphasized',
+    borderRadius: 'lg',
+    boxShadow: 'xs',
+    bg: vars.bg.reference,
+    color: vars.color.reference,
+    [vars.color.variable]: `colors.gray.700`,
+    _dark: {
+      [vars.color.variable]: `colors.gray.200`,
+    },
+    _hover: {
+      [vars.bg.variable]: `colors.gray.50`,
+      [vars.color.variable]: `colors.gray.800`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+        [vars.color.variable]: `colors.white`,
+      },
+    },
+    _checked: {
+      [vars.bg.variable]: `colors.gray.50`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+      },
+    },
+    _active: {
+      [vars.bg.variable]: `colors.gray.50`,
+      [vars.color.variable]: `colors.gray.900`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+        [vars.color.variable]: `colors.white`,
+      },
+    },
+    _disabled: {
+      opacity: 1,
+      borderColor: 'border.default',
+      [vars.color.variable]: `colors.gray.400`,
+      _dark: {
+        [vars.color.variable]: `colors.gray.600`,
+      },
+      _hover: {
+        [vars.color.variable]: `colors.gray.400`,
+        _dark: {
+          [vars.color.variable]: `colors.gray.600`,
+        },
+      },
+    },
+    _focusVisible: {
+      boxShadow: 'focus',
+    },
+  }),
+
+  tertiary: defineStyle({
+    borderRadius: 'lg',
+    bg: vars.bg.reference,
+    color: vars.color.reference,
+    [vars.color.variable]: `colors.gray.600`,
+    _dark: {
+      [vars.color.variable]: `colors.gray.300`,
+    },
+    _hover: {
+      [vars.bg.variable]: `colors.gray.50`,
+      [vars.color.variable]: `colors.gray.800`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+        [vars.color.variable]: `colors.white`,
+      },
+    },
+    _checked: {
+      [vars.bg.variable]: `colors.gray.50`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+      },
+    },
+    _active: {
+      [vars.bg.variable]: `colors.gray.50`,
+      [vars.color.variable]: `colors.gray.900`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+        [vars.color.variable]: `colors.white`,
+      },
+    },
+    _disabled: {
+      opacity: 1,
+      [vars.color.variable]: `colors.gray.400`,
+      _dark: {
+        [vars.color.variable]: `colors.gray.600`,
+      },
+      _hover: {
+        [vars.color.variable]: `colors.gray.400`,
+        _dark: {
+          [vars.color.variable]: `colors.gray.600`,
+        },
+      },
+    },
+    _focusVisible: {
+      boxShadow: 'focus',
+    },
+  }),
+
+  text: defineStyle((props) => {
+    const { colorScheme } = props
+    const baseStyle = defineStyle({
+      borderRadius: '0',
       padding: 0,
       height: 'auto',
       lineHeight: 'normal',
       verticalAlign: 'baseline',
-      color: 'brand.50',
+      color: vars.color.reference,
+    })
+
+    if (colorScheme === 'gray') {
+      return {
+        ...baseStyle,
+        [vars.color.variable]: `colors.gray.600`,
+        _dark: {
+          [vars.color.variable]: `colors.gray.200`,
+        },
+        _hover: {
+          [vars.color.variable]: `colors.gray.700`,
+          _dark: {
+            [vars.color.variable]: `colors.gray.300`,
+          },
+        },
+        _active: {
+          [vars.color.variable]: `colors.gray.800`,
+          _dark: {
+            [vars.color.variable]: `colors.gray.300`,
+          },
+        },
+        _focusVisible: {
+          boxShadow: '0 4px 0 0 #EDF2F7',
+          _dark: {
+            boxShadow: '0 4px 0 0 #2D3748',
+          },
+        },
+        _disabled: {
+          opacity: 1,
+          [vars.color.variable]: `colors.gray.400`,
+          _dark: {
+            [vars.color.variable]: `colors.gray.600`,
+          },
+          _hover: {
+            [vars.color.variable]: `colors.gray.400`,
+            _dark: {
+              [vars.color.variable]: `colors.gray.600`,
+            },
+          },
+        },
+      }
+    }
+
+    return {
+      ...baseStyle,
+      [vars.color.variable]: `colors.${colorScheme}.700`,
+      _dark: {
+        [vars.color.variable]: `colors.${colorScheme}.200`,
+      },
       _hover: {
-        color: 'white',
+        [vars.color.variable]: `colors.${colorScheme}.800`,
+        _dark: {
+          [vars.color.variable]: `colors.${colorScheme}.300`,
+        },
       },
       _active: {
-        color: 'white',
+        [vars.color.variable]: `colors.${colorScheme}.800`,
+        _dark: {
+          [vars.color.variable]: `colors.${colorScheme}.300`,
+        },
       },
     }
-  },
+  }),
 }
 
 export default defineStyleConfig({
-  baseStyle,
   variants,
   sizes,
+  defaultProps: {
+    colorScheme: 'teal',
+  },
 })
+
+// const variants = {
+//   'primary-on-accent': () => ({
+//     bg: 'brand.50',
+//     color: 'brand.600',
+//     _hover: { bg: 'brand.100' },
+//     _active: { bg: 'brand.100' },
+//   }),
+//   'secondary-on-accent': {
+//     color: 'white',
+//     borderColor: 'brand.50',
+//     borderWidth: '1px',
+//     _hover: { bg: 'whiteAlpha.200' },
+//     _active: { bg: 'whiteAlpha.200' },
+//   },
+//   'ghost-on-accent': (props: StyleFunctionProps) => ({
+//     color: 'brand.50',
+//     _hover: {
+//       bg: transparentize('brand.500', 0.67)(props.theme),
+//     },
+//     _activeLink: {
+//       color: 'white',
+//       bg: 'bg-accent-subtle',
+//     },
+//   }),
+//   'link-on-accent': () => {
+//     return {
+//       padding: 0,
+//       height: 'auto',
+//       lineHeight: 'normal',
+//       verticalAlign: 'baseline',
+//       color: 'brand.50',
+//       _hover: {
+//         color: 'white',
+//       },
+//       _active: {
+//         color: 'white',
+//       },
+//     }
+//   },
+// }

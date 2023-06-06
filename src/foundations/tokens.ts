@@ -2,26 +2,25 @@ export default {
   colors: {
     'bg.canvas': {
       default: 'gray.25',
-      _dark: 'gray.900',
+      _dark: 'gray.950',
     },
     'bg.surface': {
       default: 'white',
-      _dark: 'gray.800',
+      _dark: 'gray.900',
     },
     'bg.subtle': {
       default: 'gray.50',
-      _dark: 'gray.700',
+      _dark: 'gray.800',
     },
     'bg.muted': {
       default: 'gray.100',
-      _dark: 'gray.600',
+      _dark: 'gray.700',
     },
 
     'fg.default': {
-      default: 'gray.950',
+      default: 'gray.900',
       _dark: 'white',
     },
-
     'fg.emphasized': {
       default: 'gray.700',
       _dark: 'gray.200',
@@ -81,6 +80,10 @@ export default {
     xl: {
       default: '0px 0px 1px rgba(45, 55, 72, 0.05), 0px 16px 24px rgba(45, 55, 72,  0.1)',
       _dark: '0px 0px 1px rgba(13, 14, 20, 1), 0px 16px 24px rgba(13, 14, 20, 0.9)',
+    },
+    focus: {
+      default: '0 0 0 4px #EDF2F7',
+      _dark: '0 0 0 4px #2D3748',
     },
   },
 }

@@ -13,7 +13,7 @@ export const WithSizes = () => {
     <Stack spacing="8" align="start">
       {sizes.map((size) => (
         <Stack key={size}>
-          <Text textStyle="xs" color="muted">
+          <Text textStyle="xs" color="fg.muted">
             {size}
           </Text>
           <Checkbox size={size} defaultChecked>

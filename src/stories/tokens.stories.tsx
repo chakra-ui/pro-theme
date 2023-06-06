@@ -13,7 +13,7 @@ export const TextStyles = () => {
     <Stack spacing="8">
       {textStyles.map((textStyle) => (
         <Stack key={textStyle}>
-          <Text textStyle="xs" color="muted">
+          <Text textStyle="xs" color="fg.muted">
             {textStyle}
           </Text>
           <Text textStyle={textStyle} variant={textStyle}>
@@ -27,7 +27,9 @@ export const TextStyles = () => {
 
 export const Shadows = () => {
   const theme = useTheme()
-  const shadows = Object.keys(theme.semanticTokens.shadows).filter((key) => !key.includes('chakra'))
+  const shadows = Object.keys(theme.semanticTokens.shadows).filter(
+    (key) => !key.includes('chakra') && key !== 'focus',
+  )
 
   return (
     <Stack spacing="5">
