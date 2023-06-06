@@ -195,6 +195,12 @@ const variants = {
         [vars.color.variable]: `colors.white`,
       },
     },
+    _activeLink: {
+      [vars.bg.variable]: `colors.gray.100`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.700`,
+      },
+    },
     _disabled: {
       opacity: 1,
       [vars.color.variable]: `colors.gray.400`,
@@ -310,7 +316,7 @@ const variants = {
     },
     _activeLink: {
       color: 'white',
-      bg: 'bg-accent-subtle',
+      bg: 'bg.accent.subtle',
     },
   })),
 

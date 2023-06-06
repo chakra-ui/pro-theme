@@ -2,9 +2,13 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Added missing `activeLink` styles for `Button` variants `tertiary` and `tertiary.accent`.
+
 ## [0.2.1] - 2023-06-06
 
-### Changed
+### Fixed
 
 - The default `colorScheme` property for `Button` has been changed from 'teal' to 'brand'.
 
