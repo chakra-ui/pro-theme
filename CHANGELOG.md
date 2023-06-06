@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-06-06
+
 ### Added
 
 - Introduced `gray.25` with the hexadecimal value `#fcfdfe`.
