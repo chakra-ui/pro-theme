@@ -6,13 +6,19 @@
 
 - Introduced `gray.25` with the hexadecimal value `#fcfdfe`.
 - Introduced `gray.950` with the hexadecimal value `#14151e`.
-- Introduced a new semantic token `border.emphasized`.Ø
+- Introduced a new semantic token `border.emphasized`.
 
 ### Changed
 
 - Renamed default font family to `Inter Variable` from `InterVariable`.
 - Adjusted `gray.50` to better fit into lower hues. `gray.50` color hex value has been changed from #F7FAFC to #f4f8fa.
-- Renamed several semantic tokens to improve their intuitiveness and self-explanatory nature.
+- Renamed `Button` variant `primary-on-accent` to `primary.accent`.
+- Renamed `Button` variant `secondary-on-accent` to `secondary.accent`.
+- Renamed `Button` variant `outline` to `tertiary`.
+- Renamed `Button` variant` ghost-on-accent` to `tertiary.accent`.
+- Renamed `Button` variant `link` to `text`.
+- Renamed `Button` variant `link-on-accent` to `text.accent`.
+- Renamed several `SemanticTokens` to improve their intuitiveness and self-explanatory nature.
 
 #### Background related tokens:
 
@@ -44,6 +50,10 @@
 | Before   | After            |
 | -------- | ---------------- |
 | `border` | `border.default` |
+
+### Removed
+
+- Removed custom styles for `Button` variants `link`, `ghost` and `outline`. The default variant from the Chakra UI theme will be used.
 
 ## [0.1.1] - 2023-06-01
 

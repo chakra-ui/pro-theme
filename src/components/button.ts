@@ -1,4 +1,5 @@
 import { defineCssVars, defineStyle, defineStyleConfig } from '@chakra-ui/styled-system'
+import { transparentize } from '@chakra-ui/theme-tools'
 
 const sizes = {
   '2xs': defineStyle({
@@ -284,6 +285,48 @@ const variants = {
       },
     }
   }),
+
+  'primary.accent': defineStyle(() => {
+    return {
+      bg: 'brand.50',
+      color: 'brand.600',
+      _hover: { bg: 'brand.100' },
+      _active: { bg: 'brand.100' },
+    }
+  }),
+
+  'secondary.accent': {
+    color: 'white',
+    borderColor: 'brand.50',
+    borderWidth: '1px',
+    _hover: { bg: 'whiteAlpha.200' },
+    _active: { bg: 'whiteAlpha.200' },
+  },
+
+  'tertiary.accent': defineStyle((props) => ({
+    color: 'brand.50',
+    _hover: {
+      bg: transparentize('brand.500', 0.67)(props.theme),
+    },
+    _activeLink: {
+      color: 'white',
+      bg: 'bg-accent-subtle',
+    },
+  })),
+
+  'text.accent': defineStyle({
+    padding: 0,
+    height: 'auto',
+    lineHeight: 'normal',
+    verticalAlign: 'baseline',
+    color: 'brand.50',
+    _hover: {
+      color: 'white',
+    },
+    _active: {
+      color: 'white',
+    },
+  }),
 }
 
 export default defineStyleConfig({
@@ -293,44 +336,3 @@ export default defineStyleConfig({
     colorScheme: 'teal',
   },
 })
-
-// const variants = {
-//   'primary-on-accent': () => ({
-//     bg: 'brand.50',
-//     color: 'brand.600',
-//     _hover: { bg: 'brand.100' },
-//     _active: { bg: 'brand.100' },
-//   }),
-//   'secondary-on-accent': {
-//     color: 'white',
-//     borderColor: 'brand.50',
-//     borderWidth: '1px',
-//     _hover: { bg: 'whiteAlpha.200' },
-//     _active: { bg: 'whiteAlpha.200' },
-//   },
-//   'ghost-on-accent': (props: StyleFunctionProps) => ({
-//     color: 'brand.50',
-//     _hover: {
-//       bg: transparentize('brand.500', 0.67)(props.theme),
-//     },
-//     _activeLink: {
-//       color: 'white',
-//       bg: 'bg-accent-subtle',
-//     },
-//   }),
-//   'link-on-accent': () => {
-//     return {
-//       padding: 0,
-//       height: 'auto',
-//       lineHeight: 'normal',
-//       verticalAlign: 'baseline',
-//       color: 'brand.50',
-//       _hover: {
-//         color: 'white',
-//       },
-//       _active: {
-//         color: 'white',
-//       },
-//     }
-//   },
-// }
