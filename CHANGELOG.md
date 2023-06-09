@@ -4,20 +4,15 @@
 
 ## [0.3.0] - 2023-06-09
 
-### Fixed
-
-- Fixed an issue with the `Input` component where the `outline-on-accent` variant would not have the correct colors.
-- Fixed an issue with the `Link` component where the `menu` variant would not have the correct colors.
-- Fixed an issue with the `Popover`, `Table` and `RadioCard` component not having the correct `background-color`.
-
-## [0.3.0-beta.0] - 2023-06-06
-
 ### Changed
 
 - Tweaked `Button` variant `text` to have a more subtle color.
 
 ### Fixed
 
+- Fixed an issue with the `Input` component where the `outline-on-accent` variant would not have the correct colors.
+- Fixed an issue with the `Link` component where the `menu` variant would not have the correct colors.
+- Fixed an issue with the `Popover`, `Table` and `RadioCard` component not having the correct `background-color`.
 - Fixed `Checkbox` to have the correct font size
 
 ## [0.2.2] - 2023-06-06
