@@ -250,10 +250,7 @@ const variants = {
           },
         },
         _focusVisible: {
-          boxShadow: '0 4px 0 0 #EDF2F7',
-          _dark: {
-            boxShadow: '0 4px 0 0 #2D3748',
-          },
+          boxShadow: 'focus',
         },
         _disabled: {
           opacity: 1,

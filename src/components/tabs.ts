@@ -1,90 +1,94 @@
-import { type StyleFunctionProps } from '@chakra-ui/theme-tools'
+import { tabsAnatomy } from '@chakra-ui/anatomy'
+import {
+  createMultiStyleConfigHelpers,
+  defineStyle,
+  type StyleFunctionProps,
+} from '@chakra-ui/styled-system'
 
-const baseStyle = {
+const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(tabsAnatomy.keys)
+
+const baseStyle = definePartsStyle({
   tab: {
-    fontWeight: 'medium',
-    color: 'muted',
-    _focus: {
-      boxShadow: 'none',
-    },
-    _focusVisible: {
-      boxShadow: 'base',
-    },
+    fontWeight: 'semibold',
+    color: 'fg.subtle',
   },
-}
-
-const withLine = (props: StyleFunctionProps) => {
-  const { orientation, size } = props
-  const isVertical = orientation === 'vertical'
-  const borderProp = orientation === 'vertical' ? 'borderStart' : 'borderBottom'
-  const marginProp = isVertical ? 'marginStart' : 'marginBottom'
-
-  const horizontalStyles = {
-    pt: '0',
-    pb: '4.5',
-    px: '1',
-    justifyContent: 'start',
-    ':not(:last-child)': {
-      me: '4',
-    },
-  }
-
-  const verticalStyles = {
-    justifyContent: 'start',
-    px: size === 'lg' ? '3.5' : '3',
-    ':not(:last-child)': {
-      mb: '2',
-    },
-  }
-
-  return {
-    tablist: {
-      [borderProp]: '1px solid',
-      borderColor: 'inherit',
-    },
-    tab: {
-      color: 'muted',
-      [borderProp]: '2px solid transparent',
-      [marginProp]: '-1px',
-      _selected: {
-        color: 'accent',
-        [borderProp]: '2px solid',
-      },
-      _active: {
-        bg: 'transparent',
-      },
-      ...(isVertical ? verticalStyles : horizontalStyles),
-    },
-  }
-}
-
-const enclosed = {
-  tab: {
-    _selected: {
-      color: 'accent',
-    },
-  },
-}
-
-const variants = {
-  'with-line': withLine,
-  enclosed,
-}
+})
 
 const sizes = {
-  md: {
+  md: definePartsStyle({
     tab: {
       fontSize: 'sm',
       lineHeight: '1.25rem',
       py: '2',
     },
-  },
-  lg: {
+  }),
+  lg: definePartsStyle({
     tab: {
       fontSize: 'md',
       py: '2.5',
     },
-  },
+  }),
 }
 
-export default { baseStyle, variants, sizes }
+interface StyleFunctionPropsWithSize extends StyleFunctionProps {
+  size: 'md' | 'lg'
+}
+
+const underline = defineStyle((props) => {
+  const { orientation, size } = props as StyleFunctionPropsWithSize
+  const isVertical = orientation === 'vertical'
+  const borderProp = isVertical ? 'borderStart' : 'borderBottom'
+  const marginProp = isVertical ? 'marginStart' : 'marginBottom'
+
+  const sizeProps = sizes[size]
+
+  const horizontalStyles = definePartsStyle({
+    tab: {
+      pt: '0',
+      pb: '2.5',
+      px: '1',
+      justifyContent: 'start',
+    },
+    tabList: {
+      gap: '4',
+    },
+  })
+
+  const verticalStyles = definePartsStyle({
+    tab: {
+      justifyContent: 'start',
+      px: size === 'lg' ? '3.5' : '3',
+    },
+    tabList: {
+      gap: '1',
+    },
+  })
+
+  return {
+    tablist: {
+      [borderProp]: '1px solid',
+      borderColor: 'inherit',
+      ...(isVertical ? verticalStyles.tabList : horizontalStyles.tabList),
+    },
+    tab: {
+      [borderProp]: '2px solid transparent',
+      [marginProp]: '-1px',
+      ...baseStyle.tab,
+      ...sizeProps.tab,
+      _selected: {
+        color: 'accent',
+        [borderProp]: '2px solid',
+      },
+      ...(isVertical ? verticalStyles.tab : horizontalStyles.tab),
+    },
+  }
+})
+
+export default defineMultiStyleConfig({
+  variants: {
+    underline,
+  },
+  defaultProps: {
+    colorScheme: 'brand',
+  },
+})

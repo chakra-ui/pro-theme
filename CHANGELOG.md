@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Renamed `Tabs` variant `with-line` to `underline`.
+
+### Removed
+
+- Removed `enclosed` styles from the `Tabs` component. The default variant from the Chakra UI theme will be used.
+- `Tabs` styles no longer override the default Chakra UI theme styles.
+
 ## [0.3.0] - 2023-06-09
 
 ### Changed
@@ -87,7 +96,7 @@
 ### Removed
 
 - Removed custom styles for `Button` variants `link`, `ghost` and `outline`. The default variant from the Chakra UI theme will be used.
-- Removed `subtle` styles for the `Badge` variant. The default variant from the Chakra UI theme will be used.
+- Removed `subtle` styles from the `Badge` component. The default variant from the Chakra UI theme will be used.
 
 ## [0.1.1] - 2023-06-01
 
