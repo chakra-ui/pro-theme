@@ -10,7 +10,7 @@ const variants = {
       bg: 'bg-muted',
     },
   },
-  'on-accent': {
+  'fg.accent.default': {
     track: {
       bg: 'transparent',
     },

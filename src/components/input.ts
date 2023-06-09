@@ -75,17 +75,17 @@ const variants = {
     }
     return {
       field: {
-        bg: 'bg-accent-subtle',
-        color: 'on-accent',
+        bg: 'bg.accent.subtle',
+        color: 'fg.accent.default',
         _placeholder: {
-          color: 'on-accent',
+          color: 'fg.accent.default',
         },
         _hover: {
           borderColor: 'brand.400',
-          bg: 'bg-accent-subtle',
+          bg: 'bg.accent.subtle',
         },
         _focus: {
-          bg: 'bg-accent-subtle',
+          bg: 'bg.accent.subtle',
           borderColor: 'brand.300',
         },
       },

@@ -3,7 +3,7 @@ const variants = {
     borderRadius: 'lg',
     _hover: {
       textDecoration: 'none',
-      bg: 'bg-subtle',
+      bg: 'bg.subtle',
     },
   }),
 }

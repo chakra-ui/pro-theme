@@ -3,7 +3,7 @@ const baseStyle = {
     borderWidth: '1px',
     boxShadow: 'lg',
     borderRadius: 'lg',
-    background: 'bg-surface',
+    background: 'bg.surface',
     overflow: 'hidden',
   },
 }

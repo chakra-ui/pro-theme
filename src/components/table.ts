@@ -1,8 +1,8 @@
-import { mode, type StyleFunctionProps, transparentize } from '@chakra-ui/theme-tools'
+import { mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
 
 const baseStyle = {
   table: {
-    bg: 'bg-surface',
+    bg: 'bg.surface',
     whiteSpace: 'nowrap',
   },
   th: {

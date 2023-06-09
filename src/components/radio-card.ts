@@ -1,10 +1,10 @@
-import { mode, type StyleFunctionProps, transparentize } from '@chakra-ui/theme-tools'
+import { mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
 
 const baseStyle = (props: StyleFunctionProps) => ({
   borderWidth: '1px',
   borderRadius: 'lg',
   p: '4',
-  bg: 'bg-surface',
+  bg: 'bg.surface',
   transitionProperty: 'common',
   transitionDuration: 'normal',
   _hover: { borderColor: mode('gray.300', 'gray.600')(props) },
