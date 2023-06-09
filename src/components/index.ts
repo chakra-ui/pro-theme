@@ -1,7 +1,6 @@
 export { default as Badge } from './badge'
 export { default as Button } from './button'
 export { default as Checkbox } from './checkbox'
-export { default as CloseButton } from './close-button'
 export { default as Container } from './container'
 export { default as CustomSelect } from './custom-select'
 export { default as Divider } from './divider'
