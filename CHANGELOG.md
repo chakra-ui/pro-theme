@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2023-06-09
+
 ### Fixed
 
 - Fixed an issue with the `Input` component where the `outline-on-accent` variant would not have the correct colors.
