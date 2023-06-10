@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Added new `Tabs` variant `indicator`.
+
 ### Changed
 
 - Renamed and re-designed `Tabs` variant `with-line` to `underline`.

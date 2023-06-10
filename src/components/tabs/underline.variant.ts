@@ -1,18 +1,9 @@
 import { tabsAnatomy } from '@chakra-ui/anatomy'
-import {
-  createMultiStyleConfigHelpers,
-  defineStyle,
-  type StyleFunctionProps,
-} from '@chakra-ui/styled-system'
+import { createMultiStyleConfigHelpers, type StyleFunctionProps } from '@chakra-ui/styled-system'
 
-const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(tabsAnatomy.keys)
+const { definePartsStyle } = createMultiStyleConfigHelpers(tabsAnatomy.keys)
 
-const baseStyle = definePartsStyle({
-  tab: {
-    fontWeight: 'semibold',
-    color: 'fg.subtle',
-  },
-})
+type StyleFunctionPropsWithSize = StyleFunctionProps & { size: 'md' | 'lg' }
 
 const sizes = {
   md: definePartsStyle({
@@ -30,11 +21,7 @@ const sizes = {
   }),
 }
 
-interface StyleFunctionPropsWithSize extends StyleFunctionProps {
-  size: 'md' | 'lg'
-}
-
-const underline = defineStyle((props) => {
+export const underline = definePartsStyle((props) => {
   const { orientation, size } = props as StyleFunctionPropsWithSize
   const isVertical = orientation === 'vertical'
   const borderProp = isVertical ? 'borderStart' : 'borderBottom'
@@ -79,7 +66,8 @@ const underline = defineStyle((props) => {
     },
     tab: {
       [marginProp]: '-1px',
-      ...baseStyle.tab,
+      fontWeight: 'semibold',
+      color: 'fg.subtle',
       ...sizeProps.tab,
       _selected: {
         color: 'accent',
@@ -91,13 +79,4 @@ const underline = defineStyle((props) => {
       ...(isVertical ? verticalStyles.indicator : horizontalStyles.indicator),
     },
   }
-})
-
-export default defineMultiStyleConfig({
-  variants: {
-    underline,
-  },
-  defaultProps: {
-    colorScheme: 'brand',
-  },
 })
