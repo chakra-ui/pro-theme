@@ -1,4 +1,4 @@
-import { Stack, Tab, TabList, Tabs } from '@chakra-ui/react'
+import { Stack, Tab, TabIndicator, TabList, Tabs } from '@chakra-ui/react'
 import type { Meta } from '@storybook/react'
 
 const meta: Meta = {
@@ -11,7 +11,7 @@ export const VariantUnderline = () => {
   const sizes = ['md', 'lg'] as const
   const orientations = ['horizontal', 'vertical'] as const
   return (
-    <Stack spacing="12" align="start">
+    <Stack spacing="12">
       {orientations.map((orientation) => (
         <Stack spacing="8" key={orientation}>
           {sizes.map((size) => (
@@ -22,6 +22,7 @@ export const VariantUnderline = () => {
                   <Tab>Components</Tab>
                   <Tab>Pricing</Tab>
                 </TabList>
+                <TabIndicator />
               </Tabs>
             </Stack>
           ))}

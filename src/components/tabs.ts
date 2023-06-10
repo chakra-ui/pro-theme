@@ -52,6 +52,10 @@ const underline = defineStyle((props) => {
     tabList: {
       gap: '4',
     },
+    indicator: {
+      height: '0.5',
+      marginTop: -0.5,
+    },
   })
 
   const verticalStyles = definePartsStyle({
@@ -62,6 +66,9 @@ const underline = defineStyle((props) => {
     tabList: {
       gap: '1',
     },
+    indicator: {
+      width: '0.5',
+    },
   })
 
   return {
@@ -71,15 +78,17 @@ const underline = defineStyle((props) => {
       ...(isVertical ? verticalStyles.tabList : horizontalStyles.tabList),
     },
     tab: {
-      [borderProp]: '2px solid transparent',
       [marginProp]: '-1px',
       ...baseStyle.tab,
       ...sizeProps.tab,
       _selected: {
         color: 'accent',
-        [borderProp]: '2px solid',
       },
       ...(isVertical ? verticalStyles.tab : horizontalStyles.tab),
+    },
+    indicator: {
+      bg: 'accent',
+      ...(isVertical ? verticalStyles.indicator : horizontalStyles.indicator),
     },
   }
 })
