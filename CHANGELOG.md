@@ -4,7 +4,7 @@
 
 ### Changed
 
-- Renamed `Tabs` variant `with-line` to `underline`.
+- Renamed and re-designed `Tabs` variant `with-line` to `underline`.
 
 ### Removed
 
