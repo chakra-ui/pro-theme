@@ -1,4 +1,4 @@
-import { defineCssVars, defineStyle } from '@chakra-ui/styled-system'
+import { defineCssVars, defineStyle, defineStyleConfig } from '@chakra-ui/styled-system'
 import { transparentize } from '@chakra-ui/theme-tools'
 
 const sizes = {
@@ -41,12 +41,11 @@ const variants = {
   }),
 }
 
-const defaultProps = {
-  size: 'md',
-}
-
-export default {
-  defaultProps,
+export default defineStyleConfig({
+  defaultProps: {
+    size: 'md',
+    colorScheme: 'brand',
+  },
   variants,
   sizes,
-}
+})

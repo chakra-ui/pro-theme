@@ -1,9 +1,7 @@
-import { defineStyle, defineStyleConfig } from '@chakra-ui/styled-system'
-
-const baseStyle = defineStyle({
-  opacity: 1.0,
-})
+import { defineStyleConfig } from '@chakra-ui/styled-system'
 
 export default defineStyleConfig({
-  baseStyle,
+  baseStyle: {
+    opacity: 1.0,
+  },
 })

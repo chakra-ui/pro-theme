@@ -9,6 +9,7 @@
 ### Changed
 
 - Renamed and re-designed `Tabs` variant `with-line` to `underline`.
+- Changed the default `colorScheme` for `Badge` from `gray` to `brand`.
 
 ### Removed
 
