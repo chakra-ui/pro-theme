@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.4.0] - 2023-06-11
+
 ### Added
 
 - Added new `Tabs` variant `indicator`.
