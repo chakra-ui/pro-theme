@@ -43,24 +43,27 @@ This code snippet imports the Pro Theme and the base theme from Chakra UI. It th
 
 ## Font Configuration
 
-Chakra UI Pro Theme comes with the Inter font as default. To include this, first, you need to install the font:
+Chakra UI Pro Theme uses `Spline Sans` as `heading` font family and `Open Sans` as `body` font family by default. To include this, first, you need to install the font:
 
 ```bash
-yarn add @fontsource-variable/inter
+yarn add @fontsource-variable/spline-sans @fontsource-variable/open-sans
 ```
 
 Then, you can import it in your theme setup:
 
 ```javascript
-import '@fontsource-variable/inter'
+import '@fontsource-variable/open-sans'
+import '@fontsource-variable/spline-sans'
 ```
+
+> Note: Depending on the platform/framework, the best way to install fonts may differ.
 
 ### Using a Different Font
 
-To use a different font, such as Fira Code, you first need to install the font:
+To use a different font, such as `Inter`, you first need to install the font:
 
 ```bash
-yarn add @fontsource-variable/fira-code
+yarn add @fontsource-variable/inter
 ```
 
 Then, import the font and adjust the `fonts` key in your theme configuration:
@@ -68,14 +71,14 @@ Then, import the font and adjust the `fonts` key in your theme configuration:
 ```javascript
 import { theme as proTheme } from '@chakra-ui/pro-theme'
 import { extendTheme, theme as baseTheme } from '@chakra-ui/react'
-import '@fontsource-variable/fira-code'
+import '@fontsource-variable/inter'
 
 export const theme = extendTheme(
   {
     colors: { ...baseTheme.colors, brand: baseTheme.colors.blue },
     fonts: {
-      heading: "'Fira Code Variable', -apple-system, system-ui, sans-serif",
-      body: "'Fira Code Variable', -apple-system, system-ui, sans-serif",
+      heading: "'Inter Variable', -apple-system, system-ui, sans-serif",
+      body: "'Inter Variable', -apple-system, system-ui, sans-serif",
     },
   },
   proTheme,
