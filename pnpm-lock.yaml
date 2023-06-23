@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -31,7 +31,10 @@ devDependencies:
   '@emotion/styled':
     specifier: 11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.10)(react@18.2.0)
-  '@fontsource-variable/inter':
+  '@fontsource-variable/open-sans':
+    specifier: 5.0.4
+    version: 5.0.4
+  '@fontsource-variable/spline-sans':
     specifier: 5.0.3
     version: 5.0.3
   '@release-it/keep-a-changelog':
@@ -3060,8 +3063,12 @@ packages:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
 
-  /@fontsource-variable/inter@5.0.3:
-    resolution: {integrity: sha512-AIE1Lm2/cNkCD4oAJ3JVY54tGhlUS7NnAiqGmE045v+7XHqmUhSYjhQNUgnBGcenth4bN75l+KIeTDbcGc7Emw==}
+  /@fontsource-variable/open-sans@5.0.4:
+    resolution: {integrity: sha512-J0kjck5IzXDf5z3T0MljdWs3fNhOzGzP1AYwmkXtQ9QL8iKvrTDlLvf3erPIyUSqs6YDtQyWrz3yloQt7gLpYg==}
+    dev: true
+
+  /@fontsource-variable/spline-sans@5.0.3:
+    resolution: {integrity: sha512-WkRSr+pNlWwMascigbNKpuaaBwqbjb/645LLEDiaZSQTDTSC7xPYQr0FwsCX4zNVelZWpDiLeHyDAsiMmNIT1g==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.10:

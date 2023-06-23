@@ -1,5 +1,7 @@
 import { ChakraProvider, theme as baseTheme, extendTheme, useColorMode } from '@chakra-ui/react'
-import '@fontsource-variable/inter'
+import '@fontsource-variable/open-sans'
+import '@fontsource-variable/spline-sans'
+
 import { Story, StoryContext } from '@storybook/react'
 import { Fragment, ReactNode, useEffect } from 'react'
 import { theme as proTheme } from '../src'

@@ -1,4 +1,4 @@
 export default {
-  heading: '"Inter Variable", -apple-system, system-ui, sans-serif',
-  body: '"Inter Variable", -apple-system, system-ui, sans-serif',
+  heading: '"Spline Sans Variable", -apple-system, system-ui, sans-serif',
+  body: '"Open Sans Variable", -apple-system, system-ui, sans-serif',
 }
