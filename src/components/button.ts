@@ -146,6 +146,14 @@ const variants = {
         [vars.color.variable]: `colors.white`,
       },
     },
+    _selected: {
+      [vars.bg.variable]: `colors.gray.50`,
+      [vars.color.variable]: `colors.gray.900`,
+      _dark: {
+        [vars.bg.variable]: `colors.gray.800`,
+        [vars.color.variable]: `colors.white`,
+      },
+    },
     _disabled: {
       opacity: 1,
       borderColor: 'border.default',

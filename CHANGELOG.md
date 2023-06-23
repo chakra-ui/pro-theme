@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Added `selected` sttyles for the secondary `Button` variant.
+
 ## [0.4.0] - 2023-06-11
 
 ### Added
