@@ -2,8 +2,6 @@
 
 ## [Unreleased]
 
-## [0.5.0-beta.0] - 2023-06-23
-
 ### Added
 
 - Added `selected` styles for the secondary `Button` variant.
