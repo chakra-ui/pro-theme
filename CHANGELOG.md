@@ -4,7 +4,7 @@
 
 ### Added
 
-- Added `selected` sttyles for the secondary `Button` variant.
+- Added `selected` styles for the secondary `Button` variant.
 
 ### Changed
 
