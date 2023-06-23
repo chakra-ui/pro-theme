@@ -10,6 +10,16 @@
 
 - Switched the `body` font family to `Open Sans Variable` from `Inter Variable` and updated the `heading` font family to `Spline Sans Variable` from `Inter Variable`. This modification was made to enhance readability and provide a more distinctive aesthetic appeal to our site.
 
+## [0.5.0-beta.0] - 2023-06-23
+
+### Added
+
+- Added `selected` styles for the secondary `Button` variant.
+
+### Changed
+
+- Switched the `body` font family to `Open Sans Variable` from `Inter Variable` and updated the `heading` font family to `Spline Sans Variable` from `Inter Variable`. This modification was made to enhance readability and provide a more distinctive aesthetic appeal to our site.
+
 ## [0.4.0] - 2023-06-11
 
 ### Added
