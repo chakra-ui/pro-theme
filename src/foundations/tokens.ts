@@ -59,6 +59,14 @@ export default {
       default: 'brand.500',
       _dark: 'brand.200',
     },
+    success: {
+      default: 'green.500',
+      _dark: 'green.200',
+    },
+    error: {
+      default: 'red.500',
+      _dark: 'red.200',
+    },
   },
   shadows: {
     xs: {
