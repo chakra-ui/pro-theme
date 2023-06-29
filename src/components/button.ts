@@ -74,6 +74,7 @@ const variants = {
     const { colorScheme } = props
     return {
       borderRadius: 'lg',
+      flexShrink: 0,
       bg: vars.bg.reference,
       color: vars.color.reference,
 
@@ -116,6 +117,7 @@ const variants = {
     borderWidth: '1px',
     borderColor: 'border.emphasized',
     borderRadius: 'lg',
+    flexShrink: 0,
     bg: vars.bg.reference,
     color: vars.color.reference,
     [vars.color.variable]: `colors.gray.700`,
@@ -173,6 +175,7 @@ const variants = {
 
   tertiary: defineStyle({
     borderRadius: 'lg',
+    flexShrink: 0,
     bg: vars.bg.reference,
     color: vars.color.reference,
     [vars.color.variable]: `colors.gray.600`,
