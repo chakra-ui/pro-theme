@@ -7,7 +7,7 @@ const baseStyle = {
 const variants = {
   solid: {
     track: {
-      bg: 'bg-muted',
+      bg: 'bg.muted',
     },
   },
   'fg.accent.default': {

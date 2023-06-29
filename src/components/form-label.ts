@@ -1,5 +1,5 @@
 const baseStyle = {
-  color: 'emphasized',
+  color: 'fg.emphasized',
   mb: '1.5',
   fontSize: 'sm',
 }
@@ -41,14 +41,14 @@ const variants = {
     left: '0',
     _peerPlaceholderShown: {
       fontWeight: 'normal',
-      color: 'subtle',
+      color: 'fg.subtle',
     },
     _peerFocus: {
       fontSize: 'sm',
       fontWeight: 'medium',
       top: '-27px',
       left: '0',
-      color: 'muted',
+      color: 'fg.muted',
     },
   }),
 }

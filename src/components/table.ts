@@ -17,13 +17,13 @@ const baseStyle = {
 const variants = {
   simple: (props: StyleFunctionProps) => ({
     th: {
-      color: 'muted',
+      color: 'fg.muted',
       bg: mode('gray.50', transparentize('gray.700', 0.4)(props.theme))(props),
     },
   }),
   striped: (props: StyleFunctionProps) => ({
     th: {
-      color: 'muted',
+      color: 'fg.muted',
       borderBottomWidth: '0px',
     },
     thead: {

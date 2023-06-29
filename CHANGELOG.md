@@ -18,6 +18,10 @@
 - Removed `outline-on-accent` variant for `Input` component as it was barely used.
 - Removed `filled` styles from the `Input` component. The default variant from the Chakra UI theme will be used.
 
+### Fixed
+
+- Fixed an issue with the `FormLabel`, `Progress` and `Table`component not having the correct `color`.
+
 ## [0.5.0] - 2023-06-23
 
 ### Added
