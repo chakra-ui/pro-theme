@@ -7,7 +7,7 @@ const sizes = {
     minW: '6',
     fontSize: '2xs',
     px: '2',
-    '& .chakra-button__icon': {
+    '& svg': {
       fontSize: 'sm',
     },
   }),
@@ -25,7 +25,7 @@ const sizes = {
     minW: '9',
     fontSize: 'sm',
     px: '3.5',
-    '& .chakra-button__icon': {
+    '& svg': {
       fontSize: 'xl',
     },
   }),
@@ -34,7 +34,7 @@ const sizes = {
     minW: '10',
     fontSize: 'sm',
     px: '4',
-    '& .chakra-button__icon': {
+    '& svg': {
       fontSize: 'xl',
     },
   }),
@@ -43,7 +43,7 @@ const sizes = {
     minW: '11',
     fontSize: 'md',
     px: '4.5',
-    '& .chakra-button__icon': {
+    '& svg': {
       fontSize: 'xl',
     },
   }),
@@ -52,7 +52,7 @@ const sizes = {
     minW: '12',
     fontSize: 'md',
     px: '5',
-    '& .chakra-button__icon': {
+    '& svg': {
       fontSize: 'xl',
     },
   }),
@@ -61,7 +61,7 @@ const sizes = {
     minW: '15',
     fontSize: 'lg',
     px: '7',
-    '& .chakra-button__icon': {
+    '& svg': {
       fontSize: '2xl',
     },
   }),
@@ -121,6 +121,9 @@ const variants = {
     bg: vars.bg.reference,
     color: vars.color.reference,
     [vars.color.variable]: `colors.gray.700`,
+    '> svg': {
+      color: 'fg.muted',
+    },
     _dark: {
       [vars.color.variable]: `colors.gray.200`,
     },
@@ -158,6 +161,9 @@ const variants = {
       opacity: 1,
       borderColor: 'border.default',
       [vars.color.variable]: `colors.gray.400`,
+      '> svg': {
+        color: 'unset',
+      },
       _dark: {
         [vars.color.variable]: `colors.gray.600`,
       },

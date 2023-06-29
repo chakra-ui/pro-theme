@@ -18,7 +18,7 @@ export default defineStyleConfig({
         height: '1.5px',
         borderRadius: 'sm',
         backgroundColor: 'accent',
-        bottom: '-1px',
+        bottom: '0',
         left: '0',
         transformOrigin: 'right',
         transform: 'scaleX(0)',

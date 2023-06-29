@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Revise `IconButton` to have a more consistent look with the rest of the components.
+
+## Changed
+
+- Tweak `CloseButton` to visually align with the `IconButton` component.
+
 ## [0.7.1] - 2023-06-29
 
 ## Fixed
@@ -208,5 +216,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.5.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.5.0
 [0.6.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.6.0
 [0.7.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.0
-
 [0.7.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.1

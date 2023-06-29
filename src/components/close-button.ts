@@ -36,19 +36,19 @@ const baseStyle = defineStyle({
 const sizes = {
   '2xs': defineStyle({
     [vars.size.variable]: 'sizes.6',
-    fontSize: '2xs',
+    fontSize: 'xs',
   }),
   xs: defineStyle({
     [vars.size.variable]: 'sizes.8',
-    fontSize: 'xs',
+    fontSize: 'sm',
   }),
   sm: defineStyle({
     [vars.size.variable]: 'sizes.9',
-    fontSize: 'xs',
+    fontSize: 'md',
   }),
   md: defineStyle({
     [vars.size.variable]: 'sizes.10',
-    fontSize: 'sm',
+    fontSize: 'md',
   }),
   lg: defineStyle({
     [vars.size.variable]: 'sizes.11',
