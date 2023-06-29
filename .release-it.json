@@ -7,8 +7,12 @@
   },
   "plugins": {
     "@release-it/keep-a-changelog": {
+      "addUnreleased": true,
+      "addVersionUrl": true,
       "filename": "CHANGELOG.md",
-      "addUnreleased": true
+      "versionUrlFormats": {
+        "repositoryUrl": "https://github.com/chakra-ui/pro-theme"
+      }
     }
   }
 }
