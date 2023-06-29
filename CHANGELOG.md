@@ -10,6 +10,7 @@
 
 - Removed `boxShadow` from `Button` variant `primary` and `secondary` to make the component more consistent with the rest of the components.
 - Tone down the `boxShadow` for `Tabs` variant `inidcator`.
+- Increase font weight for `Checkbox` to `semibold`.
 
 ## [0.5.0] - 2023-06-23
 

@@ -12,7 +12,7 @@ const baseStyle = definePartsStyle((props) => {
   return {
     label: {
       color: 'fg.emphasized',
-      fontWeight: 'medium',
+      fontWeight: 'semibold',
     },
     control: {
       borderWidth: '1px',
@@ -20,7 +20,6 @@ const baseStyle = definePartsStyle((props) => {
       bg: vars.bg.reference,
       _checked: {
         [vars.bg.variable]: `colors.${colorScheme}.500`,
-
         color: 'white',
         _hover: {
           [vars.bg.variable]: `colors.${colorScheme}.600`,

@@ -41,8 +41,7 @@ const variants = {
       },
     },
     field: {
-      border: '1px solid',
-      borderColor: 'inherit',
+      borderWidth: '1px',
       bg: mode('white', 'gray.800')(props),
 
       _hover: {
