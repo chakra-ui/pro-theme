@@ -6,6 +6,11 @@
 
 - Added semantic token `success` and `error` to help with conveying the status of a component.
 
+### Changed
+
+- Removed `boxShadow` from `Button` variant `primary` and `secondary` to make the component more consistent with the rest of the components.
+- Tone down the `boxShadow` for `Tabs` variant `inidcator`.
+
 ## [0.5.0] - 2023-06-23
 
 ### Added

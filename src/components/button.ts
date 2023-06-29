@@ -74,7 +74,6 @@ const variants = {
     const { colorScheme } = props
     return {
       borderRadius: 'lg',
-      boxShadow: 'xs',
       bg: vars.bg.reference,
       color: vars.color.reference,
 
@@ -117,7 +116,6 @@ const variants = {
     borderWidth: '1px',
     borderColor: 'border.emphasized',
     borderRadius: 'lg',
-    boxShadow: 'xs',
     bg: vars.bg.reference,
     color: vars.color.reference,
     [vars.color.variable]: `colors.gray.700`,

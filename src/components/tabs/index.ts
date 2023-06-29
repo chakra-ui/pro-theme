@@ -12,5 +12,6 @@ export default defineMultiStyleConfig({
   },
   defaultProps: {
     colorScheme: 'brand',
+    size: 'md',
   },
 })

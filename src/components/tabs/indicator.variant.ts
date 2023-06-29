@@ -60,7 +60,7 @@ export const indicator = definePartsStyle((props) => {
     indicator: {
       ...sizeProps.indicator,
       borderRadius: 'md',
-      boxShadow: 'sm',
+      boxShadow: 'xs',
       bg: 'white',
       _dark: {
         bg: 'gray.700',
