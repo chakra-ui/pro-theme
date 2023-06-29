@@ -1,6 +1,6 @@
 {
   "name": "@chakra-ui/pro-theme",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
