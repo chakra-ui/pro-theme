@@ -21,18 +21,14 @@ const variants = {
   outline: definePartsStyle((props) => ({
     field: {
       borderRadius: 'lg',
-      borderColor: 'gray.300',
+      borderColor: 'border.emphasized',
       bg: vars.bg.reference,
       [vars.bg.variable]: `white`,
       _dark: {
         [vars.bg.variable]: `gray.800`,
-        borderColor: 'gray.700',
       },
       _hover: {
-        borderColor: 'gray.400',
-        _dark: {
-          borderColor: 'gray.600',
-        },
+        borderColor: 'border.active',
       },
       _focusVisible: {
         zIndex: 1,
@@ -46,10 +42,7 @@ const variants = {
     },
     addon: {
       borderRadius: 'lg',
-      borderColor: 'gray.300',
-      _dark: {
-        borderColor: 'gray.700',
-      },
+      borderColor: 'border.emphasized',
       bg: 'bg.subtle',
     },
   })),

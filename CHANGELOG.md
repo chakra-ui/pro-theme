@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added `border.active` token to help with conveying the status of a component.
+
+## Changed
+
+- Tweaked `border.default` and `border.emphasized` token to have a more subtle color in dark mode.
+
 ## [0.6.0] - 2023-06-29
 
 ### Added

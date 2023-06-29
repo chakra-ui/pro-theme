@@ -40,10 +40,14 @@ export default {
 
     'border.default': {
       default: 'gray.200',
-      _dark: 'gray.700',
+      _dark: 'gray.800',
     },
     'border.emphasized': {
       default: 'gray.300',
+      _dark: 'gray.700',
+    },
+    'border.active': {
+      default: 'gray.400',
       _dark: 'gray.600',
     },
 
