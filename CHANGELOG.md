@@ -1,29 +1,13 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
 ## [Unreleased]
 
 ## [0.6.0] - 2023-06-29
-
-### Added
-
-- Added semantic token `success` and `error` to help with conveying the status of a component.
-- Added `filled.accent` variant for `Input` component.
-
-### Changed
-
-- Removed `boxShadow` from `Button` variant `primary` and `secondary` to make the component more consistent with the rest of the components.
-- Tone down the `boxShadow` for `Tabs` variant `inidcator`.
-
-### Removed
-
-- Removed `outline-on-accent` variant for `Input` component as it was barely used.
-- Removed `filled` styles from the `Input` component. The default variant from the Chakra UI theme will be used.
-
-### Fixed
-
-- Fixed an issue with the `FormLabel`, `Progress` and `Table` component not having the correct `color`.
-
-## [0.6.0-beta.0] - 2023-06-29
 
 ### Added
 
@@ -196,4 +180,12 @@
 | `2xl` | n/A    | 60px  |
 
 [unreleased]: https://github.com/chakra-ui/pro-theme/compare/0.6.0...HEAD
+[0.1.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.1.0
+[0.1.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.1.1
+[0.2.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.2.0
+[0.2.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.2.1
+[0.2.2]: https://github.com/chakra-ui/pro-theme/releases/tag/0.2.2
+[0.3.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.3.0
+[0.4.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.4.0
+[0.5.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.5.0
 [0.6.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.6.0
