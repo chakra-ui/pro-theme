@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Revise `CloseButton` to have a more consistent look with the rest of the components.
 - Added `border.active` token to help with conveying the status of a component.
 - Added `underline` variant for `Link` component.
 
