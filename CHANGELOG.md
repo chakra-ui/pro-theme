@@ -5,12 +5,18 @@
 ### Added
 
 - Added semantic token `success` and `error` to help with conveying the status of a component.
+- Added `filled.accent` variant for `Input` component.
 
 ### Changed
 
 - Removed `boxShadow` from `Button` variant `primary` and `secondary` to make the component more consistent with the rest of the components.
 - Tone down the `boxShadow` for `Tabs` variant `inidcator`.
 - Increase font weight for `Checkbox` to `semibold`.
+
+### Removed
+
+- Removed `outline-on-accent` variant for `Input` component as it was barely used.
+- Removed `filled` styles from the `Input` component. The default variant from the Chakra UI theme will be used.
 
 ## [0.5.0] - 2023-06-23
 

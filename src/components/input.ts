@@ -1,6 +1,5 @@
 import { inputAnatomy as parts } from '@chakra-ui/anatomy'
-import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
-import { mode, transparentize, type StyleFunctionProps } from '@chakra-ui/theme-tools'
+import { createMultiStyleConfigHelpers, defineCssVars } from '@chakra-ui/react'
 
 const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(parts.keys)
 
@@ -11,86 +10,68 @@ const baseStyle = definePartsStyle({
     },
     _placeholder: {
       opacity: 1,
-      color: 'gray.500',
-      _dark: {
-        color: 'gray.300',
-      },
+      color: 'fg.subtle',
     },
   },
 })
 
+const vars = defineCssVars('input', ['bg', 'borderColor'])
+
 const variants = {
-  outline: (props: StyleFunctionProps) => ({
+  outline: definePartsStyle((props) => ({
     field: {
       borderRadius: 'lg',
-      bg: mode('white', 'gray.800')(props),
-      _hover: { borderColor: mode('gray.300', 'gray.600')(props) },
-      _focus: {
-        borderColor: mode('brand.500', 'brand.200')(props),
-        boxShadow: mode(
-          `0px 0px 0px 1px ${transparentize(`brand.500`, 1.0)(props.theme)}`,
-          `0px 0px 0px 1px ${transparentize(`brand.200`, 1.0)(props.theme)}`,
-        )(props),
+      borderColor: 'gray.300',
+      bg: vars.bg.reference,
+      [vars.bg.variable]: `white`,
+      _dark: {
+        [vars.bg.variable]: `gray.800`,
+        borderColor: 'gray.700',
+      },
+      _hover: {
+        borderColor: 'gray.400',
+        _dark: {
+          borderColor: 'gray.600',
+        },
+      },
+      _focusVisible: {
+        zIndex: 1,
+        borderColor: 'brand.500',
+        boxShadow: `0 0 0 1px ${props.theme.colors[props.colorScheme]['500']}`,
+        _dark: {
+          borderColor: 'brand.200',
+          boxShadow: `0 0 0 1px ${props.theme.colors[props.colorScheme]['200']}`,
+        },
       },
     },
     addon: {
       borderRadius: 'lg',
-      bg: mode('gray.50', 'gray.700')(props),
+      borderColor: 'gray.300',
+      _dark: {
+        borderColor: 'gray.700',
+      },
+      bg: 'bg.subtle',
     },
-  }),
-  'outline-on-accent': (props: StyleFunctionProps) => ({
+  })),
+
+  'filled.accent': definePartsStyle({
     field: {
-      bg: 'white',
+      bg: 'bg.accent.subtle',
+      borderWidth: '2px',
+      borderColor: 'transparent',
       borderRadius: 'lg',
-      color: 'gray.900',
-      borderWidth: '1px',
-      borderColor: 'brand.50',
+      color: 'fg.accent.default',
       _placeholder: {
-        color: 'gray.500',
+        color: 'fg.accent.muted',
       },
       _hover: {
-        borderColor: 'brand.100',
+        borderColor: 'bg.accent.muted',
       },
-      _focus: {
-        borderColor: 'brand.200',
-        boxShadow: `0px 0px 0px 1px ${transparentize(`brand.200`, 1.0)(props.theme)}`,
+      _focusVisible: {
+        borderColor: 'brand.300',
       },
     },
   }),
-  filled: (props: StyleFunctionProps) => {
-    if (props.colorScheme === 'gray') {
-      return {
-        field: {
-          bg: mode('white', 'gray.800')(props),
-          _hover: {
-            borderColor: mode('gray.200', 'gray.700')(props),
-            bg: mode('white', 'gray.700')(props),
-          },
-          _focus: {
-            borderColor: 'accent',
-            bg: mode('white', 'gray.800')(props),
-          },
-        },
-      }
-    }
-    return {
-      field: {
-        bg: 'bg.accent.subtle',
-        color: 'fg.accent.default',
-        _placeholder: {
-          color: 'fg.accent.default',
-        },
-        _hover: {
-          borderColor: 'brand.400',
-          bg: 'bg.accent.subtle',
-        },
-        _focus: {
-          bg: 'bg.accent.subtle',
-          borderColor: 'brand.300',
-        },
-      },
-    }
-  },
 }
 
 const sizes = {
@@ -112,4 +93,7 @@ export default defineMultiStyleConfig({
   baseStyle,
   sizes,
   variants,
+  defaultProps: {
+    colorScheme: 'brand',
+  },
 })
