@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.6.0-beta.0] - 2023-06-29
+
 ### Added
 
 - Added semantic token `success` and `error` to help with conveying the status of a component.
