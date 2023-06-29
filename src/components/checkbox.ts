@@ -12,7 +12,7 @@ const baseStyle = definePartsStyle((props) => {
   return {
     label: {
       color: 'fg.emphasized',
-      fontWeight: 'semibold',
+      fontWeight: 'medium',
     },
     control: {
       borderWidth: '1px',

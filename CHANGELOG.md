@@ -2,6 +2,25 @@
 
 ## [Unreleased]
 
+### Added
+
+- Added semantic token `success` and `error` to help with conveying the status of a component.
+- Added `filled.accent` variant for `Input` component.
+
+### Changed
+
+- Removed `boxShadow` from `Button` variant `primary` and `secondary` to make the component more consistent with the rest of the components.
+- Tone down the `boxShadow` for `Tabs` variant `inidcator`.
+
+### Removed
+
+- Removed `outline-on-accent` variant for `Input` component as it was barely used.
+- Removed `filled` styles from the `Input` component. The default variant from the Chakra UI theme will be used.
+
+### Fixed
+
+- Fixed an issue with the `FormLabel`, `Progress` and `Table` component not having the correct `color`.
+
 ## [0.6.0-beta.0] - 2023-06-29
 
 ### Added
@@ -13,7 +32,6 @@
 
 - Removed `boxShadow` from `Button` variant `primary` and `secondary` to make the component more consistent with the rest of the components.
 - Tone down the `boxShadow` for `Tabs` variant `inidcator`.
-- Increase font weight for `Checkbox` to `semibold`.
 
 ### Removed
 
@@ -22,7 +40,7 @@
 
 ### Fixed
 
-- Fixed an issue with the `FormLabel`, `Progress` and `Table`component not having the correct `color`.
+- Fixed an issue with the `FormLabel`, `Progress` and `Table` component not having the correct `color`.
 
 ## [0.5.0] - 2023-06-23
 
