@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.1] - 2023-06-29
+
 ## Fixed
 
 - Set `flexShrink` to `0` for `Button` variants to prevent it from shrinking when used in a flex container.
@@ -195,7 +197,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 | `xl`  | 60px   | 48px  |
 | `2xl` | n/A    | 60px  |
 
-[unreleased]: https://github.com/chakra-ui/pro-theme/compare/0.7.0...HEAD
+[unreleased]: https://github.com/chakra-ui/pro-theme/compare/0.7.1...HEAD
 [0.1.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.1.0
 [0.1.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.1.1
 [0.2.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.2.0
@@ -206,3 +208,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.5.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.5.0
 [0.6.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.6.0
 [0.7.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.0
+
+[0.7.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.1
