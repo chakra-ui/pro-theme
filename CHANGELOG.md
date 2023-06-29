@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.6.0] - 2023-06-29
+
 ### Added
 
 - Added semantic token `success` and `error` to help with conveying the status of a component.
@@ -192,3 +194,6 @@
 | `lg`  | 48px   | 44px  |
 | `xl`  | 60px   | 48px  |
 | `2xl` | n/A    | 60px  |
+
+[unreleased]: https://github.com/chakra-ui/pro-theme/compare/0.6.0...HEAD
+[0.6.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.6.0
