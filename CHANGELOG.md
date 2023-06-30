@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2023-06-30
+
 ## Added
 
 - Revise `Drawer` to have a more consistent spacing with the rest of the components.
@@ -215,7 +217,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 | `xl`  | 60px   | 48px  |
 | `2xl` | n/A    | 60px  |
 
-[unreleased]: https://github.com/chakra-ui/pro-theme/compare/0.8.0...HEAD
+[unreleased]: https://github.com/chakra-ui/pro-theme/compare/0.9.0...HEAD
 [0.1.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.1.0
 [0.1.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.1.1
 [0.2.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.2.0
@@ -228,3 +230,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.7.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.0
 [0.7.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.1
 [0.8.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.8.0
+
+[0.9.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.9.0
