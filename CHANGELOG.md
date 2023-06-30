@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- Revise `Drawer` to have a more consistent spacing with the rest of the components.
+
 ## Fixed
 
 - Fixed an issue with the `Button` component where the `text` variant had the wrong line height.
