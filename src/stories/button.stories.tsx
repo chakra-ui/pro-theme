@@ -1,4 +1,4 @@
-import { Button, HStack, Stack, Text } from '@chakra-ui/react'
+import { Button, Stack, Text } from '@chakra-ui/react'
 import type { Meta } from '@storybook/react'
 import { FiArrowRight } from 'react-icons/fi'
 
@@ -28,69 +28,31 @@ export const WithSizes = () => {
 
 export const WithVariants = () => {
   const variants = [
-    [
-      { variant: 'solid', colorScheme: 'teal' },
-      { variant: 'primary', colorScheme: 'brand' },
-    ],
-    [
-      { variant: 'outline', colorScheme: 'gray' },
-      { variant: 'secondary', colorScheme: 'gray' },
-    ],
-    [
-      { variant: 'ghost', colorScheme: 'gray' },
-      { variant: 'tertiary', colorScheme: 'gray' },
-    ],
-    [
-      { variant: 'link', colorScheme: 'gray' },
-      { variant: 'text', colorScheme: 'gray' },
-    ],
+    { variant: 'primary', colorScheme: 'brand' },
+    { variant: 'secondary', colorScheme: 'gray' },
+    { variant: 'tertiary', colorScheme: 'gray' },
+    { variant: 'text', colorScheme: 'gray' },
   ]
   return (
     <Stack spacing="20" align="start">
-      {variants.map(([chakra, pro], index) => (
+      {variants.map(({ variant, colorScheme }, index) => (
         <Stack key={index}>
-          <HStack spacing="12">
-            <Stack spacing="3">
-              <Text textStyle="xs" color="fg.muted">
-                {chakra.variant}
-              </Text>
-              <Button
-                variant={chakra.variant}
-                colorScheme={chakra.colorScheme}
-                rightIcon={<FiArrowRight />}
-              >
-                Button
-              </Button>
-              <Button
-                variant={chakra.variant}
-                colorScheme={chakra.colorScheme}
-                rightIcon={<FiArrowRight />}
-                isDisabled
-              >
-                Button
-              </Button>
-            </Stack>
-            <Stack spacing="3">
-              <Text textStyle="xs" color="fg.muted">
-                {pro.variant}
-              </Text>
-              <Button
-                variant={pro.variant}
-                colorScheme={pro.colorScheme}
-                rightIcon={<FiArrowRight />}
-              >
-                Button
-              </Button>
-              <Button
-                variant={pro.variant}
-                colorScheme={pro.colorScheme}
-                rightIcon={<FiArrowRight />}
-                isDisabled
-              >
-                Button
-              </Button>
-            </Stack>
-          </HStack>
+          <Stack spacing="3">
+            <Text textStyle="xs" color="fg.muted">
+              {variant}
+            </Text>
+            <Button variant={variant} colorScheme={colorScheme} rightIcon={<FiArrowRight />}>
+              Button
+            </Button>
+            <Button
+              variant={variant}
+              colorScheme={colorScheme}
+              rightIcon={<FiArrowRight />}
+              isDisabled
+            >
+              Button
+            </Button>
+          </Stack>
         </Stack>
       ))}
     </Stack>

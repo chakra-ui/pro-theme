@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Fixed
+
+- Fixed an issue with the `Button` component where the `text` variant had the wrong line height.
+
 ## [0.8.0] - 2023-06-29
 
 ## Added
@@ -219,5 +223,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.6.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.6.0
 [0.7.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.0
 [0.7.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.1
-
 [0.8.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.8.0

@@ -15,6 +15,7 @@ const sizes = {
     h: '8',
     minW: '8',
     fontSize: 'xs',
+    lineHeight: '1.125rem',
     px: '2',
     '& svg': {
       fontSize: 'md',
@@ -24,6 +25,7 @@ const sizes = {
     h: '9',
     minW: '9',
     fontSize: 'sm',
+    lineHeight: '1.25rem',
     px: '3.5',
     '& svg': {
       fontSize: 'xl',
@@ -33,6 +35,7 @@ const sizes = {
     h: '10',
     minW: '10',
     fontSize: 'sm',
+    lineHeight: '1.25rem',
     px: '4',
     '& svg': {
       fontSize: 'xl',
@@ -42,6 +45,7 @@ const sizes = {
     h: '11',
     minW: '11',
     fontSize: 'md',
+    lineHeight: '1.5rem',
     px: '4.5',
     '& svg': {
       fontSize: 'xl',
@@ -51,6 +55,7 @@ const sizes = {
     h: '12',
     minW: '12',
     fontSize: 'md',
+    lineHeight: '1.5rem',
     px: '5',
     '& svg': {
       fontSize: 'xl',
@@ -60,6 +65,7 @@ const sizes = {
     h: '15',
     minW: '15',
     fontSize: 'lg',
+    lineHeight: '1.75rem',
     px: '7',
     '& svg': {
       fontSize: '2xl',
@@ -240,9 +246,9 @@ const variants = {
       borderRadius: '0',
       padding: 0,
       height: 'auto',
-      lineHeight: 'normal',
       verticalAlign: 'baseline',
       color: vars.color.reference,
+      justifyContent: 'flex-start',
     })
 
     if (colorScheme === 'gray') {
