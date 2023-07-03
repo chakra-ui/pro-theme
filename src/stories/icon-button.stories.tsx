@@ -33,7 +33,7 @@ export const WithVariants = () => {
   return (
     <Stack spacing="8" align="start">
       {variants.map(({ variant, colorScheme }) => (
-        <Stack key={variant} spacing="3">
+        <Stack key={variant} spacing="3" align="start">
           <Text textStyle="xs" color="fg.muted">
             {variant}
           </Text>

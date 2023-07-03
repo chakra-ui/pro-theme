@@ -37,9 +37,9 @@
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "@vitejs/plugin-react": "4.0.1",
-    "eslint": "8.43.0",
+    "eslint": "8.44.0",
     "eslint-plugin-react": "7.32.2",
-    "framer-motion": "10.12.17",
+    "framer-motion": "10.12.18",
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
     "prettier": "2.8.8",
@@ -51,7 +51,7 @@
     "remark-gfm": "3.0.1",
     "storybook": "7.0.24",
     "vite": "4.3.9",
-    "vite-plugin-dts": "2.3.0"
+    "vite-plugin-dts": "3.0.3"
   },
   "commitlint": {
     "extends": [
