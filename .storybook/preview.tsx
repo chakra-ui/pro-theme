@@ -17,7 +17,13 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [ThemeProvider],
+  decorators: [
+    (Story, context) => (
+      <ThemeProvider colorMode={context.globals.isDarkMode ? 'dark' : 'light'}>
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
   globalTypes: {
     isDarkMode: {
       name: 'Theme',

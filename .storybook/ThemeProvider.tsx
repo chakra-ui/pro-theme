@@ -1,34 +1,31 @@
 import { ChakraProvider, theme as baseTheme, extendTheme, useColorMode } from '@chakra-ui/react'
 import '@fontsource-variable/open-sans'
 import '@fontsource-variable/spline-sans'
-
-import { Story, StoryContext } from '@storybook/react'
 import { Fragment, ReactNode, useEffect } from 'react'
 import { theme as proTheme } from '../src'
 
-interface MainProps {
-  colorMode?: 'dark' | 'light'
-  children?: ReactNode
+type Props = {
+  colorMode: 'dark' | 'light'
+  children?: ReactNode | undefined
 }
 
-const theme = extendTheme(
-  {
-    colors: { ...baseTheme.colors, brand: baseTheme.colors.teal },
-  },
-  proTheme,
-)
+export const ThemeProvider = (props: Props) => {
+  const theme = extendTheme(
+    {
+      colors: { ...baseTheme.colors, brand: baseTheme.colors.purple },
+    },
+    proTheme,
+  )
+  return (
+    <ChakraProvider theme={theme}>
+      <Main {...props} />
+    </ChakraProvider>
+  )
+}
 
-const Main = (props: MainProps) => {
+const Main = (props: Props) => {
   const { colorMode, children } = props
   const { setColorMode } = useColorMode()
   useEffect(() => setColorMode(colorMode ? colorMode : 'light'), [colorMode])
   return <Fragment>{children}</Fragment>
 }
-
-export const ThemeProvider = (StoryFn: Story, context: StoryContext) => (
-  <ChakraProvider theme={theme}>
-    <Main colorMode={context.globals.isDarkMode ? 'dark' : 'light'}>
-      <StoryFn {...context} />
-    </Main>
-  </ChakraProvider>
-)
