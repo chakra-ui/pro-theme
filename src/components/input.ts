@@ -55,7 +55,7 @@ const variants = {
       borderRadius: 'lg',
       color: 'fg.accent.default',
       _placeholder: {
-        color: 'fg.accent.muted',
+        color: 'fg.accent.subtle',
       },
       _hover: {
         borderColor: 'bg.accent.muted',

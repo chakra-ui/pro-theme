@@ -328,7 +328,7 @@ const variants = {
   },
 
   'tertiary.accent': defineStyle((props) => ({
-    color: 'brand.50',
+    color: 'fg.accent.muted',
     _hover: {
       bg: transparentize('brand.500', 0.67)(props.theme),
     },
@@ -357,6 +357,7 @@ export default defineStyleConfig({
   variants,
   sizes,
   defaultProps: {
+    variant: 'primary',
     colorScheme: 'brand',
   },
 })

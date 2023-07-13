@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Set the default `variant` for `Button` to `primary` from `solid`.
+- Use a more subtle placeholder color for the `filled.accent` variant of the `Input` component.
+
 ## [0.9.0] - 2023-06-30
 
 ## Added
@@ -230,5 +235,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.7.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.0
 [0.7.1]: https://github.com/chakra-ui/pro-theme/releases/tag/0.7.1
 [0.8.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.8.0
-
 [0.9.0]: https://github.com/chakra-ui/pro-theme/releases/tag/0.9.0
