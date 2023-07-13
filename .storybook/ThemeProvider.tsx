@@ -12,7 +12,7 @@ type Props = {
 export const ThemeProvider = (props: Props) => {
   const theme = extendTheme(
     {
-      colors: { ...baseTheme.colors, brand: baseTheme.colors.purple },
+      colors: { ...baseTheme.colors, brand: baseTheme.colors.teal },
     },
     proTheme,
   )

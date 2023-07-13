@@ -11,6 +11,7 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       staticImport: true,
+      exclude: ['src/pro-components', 'src/stories'],
     }),
     react(),
   ],
