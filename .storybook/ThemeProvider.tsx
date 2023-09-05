@@ -1,8 +1,8 @@
-import { ChakraProvider, theme as baseTheme, extendTheme, useColorMode } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, useColorMode } from '@chakra-ui/react'
 import '@fontsource-variable/open-sans'
 import '@fontsource-variable/spline-sans'
 import { Fragment, ReactNode, useEffect } from 'react'
-import { theme as proTheme } from '../src'
+import { theme } from '../src'
 
 type Props = {
   colorMode: 'dark' | 'light'
@@ -10,14 +10,14 @@ type Props = {
 }
 
 export const ThemeProvider = (props: Props) => {
-  const theme = extendTheme(
-    {
-      colors: { ...baseTheme.colors, brand: baseTheme.colors.teal },
-    },
-    proTheme,
-  )
+  const proTheme = extendTheme(theme)
+  const extenstion = {
+    colors: { ...proTheme.colors, brand: proTheme.colors.teal },
+  }
+  const myTheme = extendTheme(extenstion, proTheme)
+
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={myTheme}>
       <Main {...props} />
     </ChakraProvider>
   )

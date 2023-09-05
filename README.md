@@ -20,26 +20,40 @@ npm install @chakra-ui/pro-theme
 
 ## Setting up the Pro Theme
 
-Setting up the Pro Theme is a straightforward process. The Pro Theme extends the base theme from Chakra UI and can be incorporated in a few simple steps.
-Import the Pro Theme and the base theme from Chakra UI:
+Setting up the Pro Theme is a straightforward process.
+
+### 1. Import Required Themes
+
+Firstly, you'll need to import the `theme` from the pro theme package nd the `extendTheme` function provided by Chakra UI. Use the following code snippet:
 
 ```typescript
-import { theme as proTheme } from '@chakra-ui/pro-theme'
-import { extendTheme, theme as baseTheme } from '@chakra-ui/react'
+import { theme } from '@chakra-ui/pro-theme'
+import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 ```
 
-Next, extend the base theme with our Pro Theme:
+### 2. Create the Extended Theme
+
+Next, create a new theme that combines the Pro Theme with your custom settings.
 
 ```javascript
-export const theme = extendTheme(
-  {
-    colors: { ...baseTheme.colors, brand: baseTheme.colors.blue },
-  },
-  proTheme,
-)
+const proTheme = extendTheme(theme)
+const extendedConfig = {
+  colors: { ...proTheme.colors, brand: proTheme.colors.teal },
+}
+const myTheme = extendTheme(extendedConfig, proTheme)
 ```
 
-This code snippet imports the Pro Theme and the base theme from Chakra UI. It then uses the `extendTheme` function from Chakra UI to merge the Pro Theme with your custom configuration.
+### 3. Integrate your Theme in Your Application
+
+Finally, wrap your application within the `ChakraProvider` and apply the custom theme.
+
+```javascript
+return (
+  <ChakraProvider theme={myTheme}>
+    <App />
+  </ChakraProvider>
+)
+```
 
 ## Font Configuration
 
@@ -69,20 +83,19 @@ yarn add @fontsource-variable/inter
 Then, import the font and adjust the `fonts` key in your theme configuration:
 
 ```javascript
-import { theme as proTheme } from '@chakra-ui/pro-theme'
-import { extendTheme, theme as baseTheme } from '@chakra-ui/react'
+import { theme } from '@chakra-ui/pro-theme'
+import { extendTheme } from '@chakra-ui/react'
 import '@fontsource-variable/inter'
 
-export const theme = extendTheme(
-  {
-    colors: { ...baseTheme.colors, brand: baseTheme.colors.blue },
-    fonts: {
-      heading: "'Inter Variable', -apple-system, system-ui, sans-serif",
-      body: "'Inter Variable', -apple-system, system-ui, sans-serif",
-    },
+const proTheme = extendTheme(theme)
+const extenstion = {
+  colors: { ...proTheme.colors, brand: proTheme.colors.teal },
+  fonts: {
+    heading: "'Inter Variable', -apple-system, system-ui, sans-serif",
+    body: "'Inter Variable', -apple-system, system-ui, sans-serif",
   },
-  proTheme,
-)
+}
+const myTheme = extendTheme(extenstion, proTheme)
 ```
 
 ## Generating Theme Typings
